@@ -1,17 +1,17 @@
 import { muiTheme } from 'storybook-addon-material-ui'
 
-import LightTheme from '../src/themes/LightTheme'
+import PurpleTheme from '../src/themes/PurpleTheme'
 
 export const decorators = [
-	muiTheme([LightTheme])
+	muiTheme([PurpleTheme])
 ];
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-}
+// export const parameters = {
+//   actions: { argTypesRegex: "^on[A-Z].*" },
+//   controls: {
+//     matchers: {
+//       color: /(background|color)$/i,
+//       date: /Date$/,
+//     },
+//   },
+// }

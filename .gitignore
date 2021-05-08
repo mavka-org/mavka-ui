@@ -11,6 +11,8 @@
 # production and distribution
 /build
 /dist
+/build-docs
+/docs-build
 
 # misc
 .DS_Store
