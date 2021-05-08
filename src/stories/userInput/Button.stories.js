@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Button from '../components/Button';
+import Button from '../../components/userInput/Button';
 
 export default {
-  title: 'Example/Button',
+  title: 'User Input/Button',
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
