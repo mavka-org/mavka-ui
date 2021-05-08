@@ -1,3 +1,9 @@
+# Distribution tutorial:
+https://storybook.js.org/tutorials/design-systems-for-developers/react/en/distribute/
+
+# Publish with Github Pages tutorial:
+https://medium.com/swlh/how-to-deploy-storybook-to-github-pages-4894097d49ab
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
