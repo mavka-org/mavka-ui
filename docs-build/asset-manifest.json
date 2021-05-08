@@ -3,8 +3,8 @@
     "0.52de580d.iframe.bundle.js": "./0.52de580d.iframe.bundle.js",
     "main.js": "./main.9e62d2d8.iframe.bundle.js",
     "runtime~main.js": "./runtime~main.5ddf8483.iframe.bundle.js",
-    "vendors~main.js": "./vendors~main.a35afd9a.iframe.bundle.js",
-    "vendors~main.js.map": "./vendors~main.a35afd9a.iframe.bundle.js.map",
+    "vendors~main.js": "./vendors~main.5e42e5da.iframe.bundle.js",
+    "vendors~main.js.map": "./vendors~main.5e42e5da.iframe.bundle.js.map",
     "4.1a7fe21f.iframe.bundle.js": "./4.1a7fe21f.iframe.bundle.js",
     "4.1a7fe21f.iframe.bundle.js.map": "./4.1a7fe21f.iframe.bundle.js.map",
     "5.ed08c754.iframe.bundle.js": "./5.ed08c754.iframe.bundle.js",
@@ -22,11 +22,11 @@
     "static/media/plugin.d494b228.svg": "./static/media/plugin.d494b228.svg",
     "static/media/repo.6d496322.svg": "./static/media/repo.6d496322.svg",
     "static/media/stackalt.dba9fbb3.svg": "./static/media/stackalt.dba9fbb3.svg",
-    "vendors~main.a35afd9a.iframe.bundle.js.LICENSE.txt": "./vendors~main.a35afd9a.iframe.bundle.js.LICENSE.txt"
+    "vendors~main.5e42e5da.iframe.bundle.js.LICENSE.txt": "./vendors~main.5e42e5da.iframe.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
     "runtime~main.5ddf8483.iframe.bundle.js",
-    "vendors~main.a35afd9a.iframe.bundle.js",
+    "vendors~main.5e42e5da.iframe.bundle.js",
     "main.9e62d2d8.iframe.bundle.js"
   ]
 }
