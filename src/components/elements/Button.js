@@ -4,7 +4,7 @@ import get from 'get-value';
 import MuiButton from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = props => makeStyles( theme => ({
+const useStyles = props => makeStyles( theme => (console.log("JHKJHJFHJHJ", props),{
   base: {
     textTransform: 'none'
   },
@@ -27,6 +27,7 @@ const useStyles = props => makeStyles( theme => ({
 }));
 
 export function ButtonBase({ children, ...props }){
+  console.log("JHKJHJFHJHJ", props.color)
   const classes = useStyles(props)();
   const classNames = `${classes.base} ${props.className}`;
   return (
