@@ -19,7 +19,7 @@ const useStyles = props => makeStyles( theme => ({
 export default function Button({ children, ...props }){
   const { root } = useStyles(props)();
   return (
-      <MuiButton className={root}>{props.label}{props.children}</MuiButton>
+      <MuiButton className={root}>{props.children}</MuiButton>
   );
 }
 
@@ -39,7 +39,7 @@ Button.propTypes = {
   /**
    * Button contents
    */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   /**
    * Optional click handler
    */

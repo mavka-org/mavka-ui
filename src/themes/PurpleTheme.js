@@ -12,8 +12,9 @@ const allPalette = {
   yellowLight: '#FFFCF1',
   purple: '#5856D6',
   purpleLight: '#EAEAFF',
-  grey: '#828282',
-  black: '#1F1F1F',
+  greyLight: 'rgba(31, 31, 31, 0.38)',
+  grey: 'rgba(31, 31, 31, 0.54)',
+  black: 'rgba(31, 31, 31, 1)', // #1F1F1F
   white: '#FFFFFF',
 }
 
@@ -25,6 +26,10 @@ const theme = {
     */
     primary: { 
       main: allPalette.purple,  
+      contrastText: allPalette.white,
+    },
+    secondary: { 
+      main: allPalette.black,  
       contrastText: allPalette.white,
     },
     success: { 
@@ -52,13 +57,11 @@ const theme = {
       contrastText: allPalette.black,
     },
     
-    content: { 
-      main: allPalette.black,
-      contrastText: allPalette.white,
-    },
-    contentGrey: { 
-      main: allPalette.grey,
-      contrastText: allPalette.white,
+    text: { 
+      primary: allPalette.black,
+      secondary: allPalette.grey,
+      disabled: allPalette.greyLight,
+      hint: allPalette.greyLight
     },
     background: { 
       main: allPalette.purpleLight,
