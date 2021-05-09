@@ -151,6 +151,14 @@ const Colors = (props) => {
           Yellow Light: {theme.palette.alternative.yellowLight}
           theme.palette.alternative.yellowLight
         </Paper>
+        <Paper className={classes.paper} style={{background: theme.palette.alternative.grey, color: theme.palette.common.white}}>
+          Grey: {theme.palette.alternative.grey}
+          theme.palette.alternative.grey
+        </Paper>
+        <Paper className={classes.paper} style={{background: theme.palette.alternative.greyLight, color: theme.palette.common.black}}>
+          Grey Light: {theme.palette.alternative.greyLight}
+          theme.palette.alternative.greyLight
+        </Paper>
       </Grid>
     </>
   )
