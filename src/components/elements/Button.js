@@ -12,7 +12,7 @@ const useStyles = props => makeStyles( theme => (console.log("JHKJHJFHJHJ", prop
     
   },
   outlined: {
-    borderColor: theme.palette[props.color].main,
+    borderColor: props.color ? theme.palette[props.color].main : theme.palette.primary.main,
   },
   text: {
     
@@ -36,6 +36,7 @@ export function ButtonBase({ children, ...props }){
 }
 
 export default function Button({ children, ...props }){
+  console.log("🚀 ~ file: Button.js ~ line 38 ~ Button ~ props", props)
   const classes = useStyles(props)();
   const classNames = `${classes[props.variant]} ${props.info ? classes.info : ''} ${props.className}`;
   if (props.info) props.onClick = () => {} // override onClick
@@ -48,7 +49,7 @@ Button.propTypes = {
   /**
    * Background color of the button
    */
-   color: PropTypes.string,
+  color: PropTypes.string,
   /**
    * The variant of the button.
    */
@@ -60,11 +61,11 @@ Button.propTypes = {
   /**
    * If true, the button will be disabled but preserve its look
    */
-   info: PropTypes.bool,
-   /**
+  info: PropTypes.bool,
+  /**
    * Background color of the button only when info = true.
    */
-    infoBackground: PropTypes.string,
+  infoBackground: PropTypes.string,
   /**
    * If true, the button will be disabled.
    */
