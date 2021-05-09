@@ -29,3 +29,16 @@ export const Size = () =>
     <Grid item><Button>Medium</Button></Grid>
     <Grid item><Button size='small'>Small</Button></Grid>
   </Grid>;
+
+export const Info = () =>
+  <Grid container spacing={2}>
+    <Grid item><Button info>Informative Button</Button></Grid>
+    <Grid item><Button info variant='outlined' infoBackground='successLight.main'>With Background</Button></Grid>
+  </Grid>;
+
+export const Disabled = () =>
+  <Grid container spacing={2}>
+    <Grid item><Button disabled>Contained</Button></Grid>
+    <Grid item><Button disabled variant='outlined'>Outlined</Button></Grid>
+    <Grid item><Button disabled variant='text'>Text</Button></Grid>
+  </Grid>;

@@ -1,10 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import get from 'get-value';
 import MuiButton from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = props => makeStyles( theme => ({
+  base: {
+    textTransform: 'none'
+  },
+  contained: {
+    
+  },
+  outlined: {
+    borderColor: theme.palette[props.color].main,
+  },
+  text: {
+    
+  },
+  info: {
+    backgroundColor: get(theme.palette, props.infoBackground) || theme.palette[props.color].main,
+    pointerEvents: 'none',
+    "&:hover": {
+        backgroundColor: get(theme.palette, props.infoBackground) || theme.palette[props.color].main
+    }
+  }
+}));
+
+export function ButtonBase({ children, ...props }){
+  const classes = useStyles(props)();
+  const classNames = `${classes.base} ${props.className}`;
+  return (
+    <MuiButton {...props} className={classNames} disableElevation centerRipple disableFocusRipple>{children}</MuiButton>
+);
+}
 
 export default function Button({ children, ...props }){
+  const classes = useStyles(props)();
+  const classNames = `${classes[props.variant]} ${props.info ? classes.info : ''} ${props.className}`;
+  if (props.info) props.onClick = () => {} // override onClick
   return (
-      <MuiButton disableElevation disableFocusRipple {...props}>{children}</MuiButton>
+      <ButtonBase {...props} className={classNames}>{children}</ButtonBase>
   );
 }
 
@@ -21,6 +56,14 @@ Button.propTypes = {
    * The size of the button.
    */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
+  /**
+   * If true, the button will be disabled but preserve its look
+   */
+   info: PropTypes.bool,
+   /**
+   * Background color of the button only when info = true.
+   */
+    infoBackground: PropTypes.string,
   /**
    * If true, the button will be disabled.
    */
@@ -48,6 +91,7 @@ Button.defaultProps = {
   color: 'primary',
   variant: 'contained',
   size: 'medium',
+  info: false,
   disabled: false,
   onClick: () => {},
 };
