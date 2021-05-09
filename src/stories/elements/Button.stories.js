@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Grid } from '@material-ui/core';
 import Button from '../../components/elements/Button';
-import {TestButton} from '../../components/elements/Button';
 
 export default {
   title: 'Elements/Button',
@@ -10,8 +9,6 @@ export default {
 };
 
 export const Default = () => <Button>Button</Button>;
-
-export const Test = () => <TestButton>Button</TestButton>;
 
 export const Color = () =>
   <Grid container spacing={2}>

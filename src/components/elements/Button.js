@@ -14,22 +14,17 @@ const useStyles = props => makeStyles( theme => ({
 
 export function ButtonBase({ children, ...props }){
   const classes = useStyles(props)();
+  const classNames = `${classes.root} ${props.className}`;
   return (
-    <MuiButton className={classes.root} disableElevation centerRipple disableFocusRipple {...props}>{children}</MuiButton>
+    <MuiButton {...props} className={classNames} disableElevation centerRipple disableFocusRipple>{children}</MuiButton>
 );
 }
 
 export default function Button({ children, ...props }){
   const classes = useStyles(props)();
+  const classNames = `${classes.root} ${props.className}`;
   return (
-      <ButtonBase className={classes.primary} {...props}>{children}</ButtonBase>
-  );
-}
-
-export function TestButton({ children, ...props }){
-  const classes = useStyles(props)();
-  return (
-      <Button className={classes.test} {...props}>{children}</Button>
+      <ButtonBase {...props} className={classNames}>{children}</ButtonBase>
   );
 }
 
