@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Grid } from '@material-ui/core';
-import ContentInfoBlock from '../../components/elements/ContentInfoBlock';
+import ContentInfoBlock from '../../components/content/ContentInfoBlock';
 
 export default {
     title: 'Content/ContentInfoBlock',

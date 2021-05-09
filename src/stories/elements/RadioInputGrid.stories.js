@@ -2,9 +2,10 @@ import React from 'react';
 
 import { Grid } from '@material-ui/core';
 import RadioInputGrid from '../../components/elements/RadioInputGrid';
+import TestRadioButton from '../../components/elements/TestRadioButton';
 
 export default {
-  title: 'Content/RadioInputGrid',
+  title: 'Elements/RadioInputGrid',
   component: RadioInputGrid,
 };
 
@@ -16,14 +17,14 @@ let OneDimenshionalList = [<TestRadioButton/>, <TestRadioButton />]
 
 
 export const Default = () => <RadioInputGrid 
-optionLabels={optionLabels} 
-taskLabels={taskLabels} 
-testRadioButtonsList={TwoDimenshionalList}/>;
+  optionLabels={optionLabels} 
+  taskLabels={taskLabels} 
+  testRadioButtonsList={TwoDimenshionalList}/>;
 
 export const OneDimensional = () => <RadioInputGrid 
-optionLabels={optionLabels} 
-taskLabels={taskLabels} 
-testRadioButtonsList={OneDimenshionalList}/>;
+  optionLabels={optionLabels} 
+  taskLabels={taskLabels} 
+  testRadioButtonsList={OneDimenshionalList}/>;
 
 export const NoLabels = () =>
   <Grid container dimension="column" spacing={2}>
