@@ -17,7 +17,7 @@ const useStyles = props => makeStyles( theme => ({
 
     },
     overfill: {
-        "background-color": getColorByCorrectness(props.correctness, theme),
+        "background-color": props.selected ? getColorByCorrectness(props.correctness, theme) : null,
         opacity: "0.15",
         position: "absolute",
         padding: 0,
