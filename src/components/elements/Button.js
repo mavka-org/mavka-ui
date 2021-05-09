@@ -6,13 +6,30 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = props => makeStyles( theme => ({
   root: {
     textTransform: 'none'
+  },
+  primary: {
+    color: '#000'
   }
 }));
 
-export default function Button({ children, ...props }){
-  const { root } = useStyles(props)();
+export function ButtonBase({ children, ...props }){
+  const classes = useStyles(props)();
   return (
-      <MuiButton className={root} disableElevation centerRipple disableFocusRipple {...props}>{children}</MuiButton>
+    <MuiButton className={classes.root} disableElevation centerRipple disableFocusRipple {...props}>{children}</MuiButton>
+);
+}
+
+export default function Button({ children, ...props }){
+  const classes = useStyles(props)();
+  return (
+      <ButtonBase className={classes.primary} {...props}>{children}</ButtonBase>
+  );
+}
+
+export function TestButton({ children, ...props }){
+  const classes = useStyles(props)();
+  return (
+      <Button className={classes.test} {...props}>{children}</Button>
   );
 }
 
