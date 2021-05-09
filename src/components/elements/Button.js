@@ -1,10 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MuiButton from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = props => makeStyles( theme => ({
+  root: {
+    textTransform: 'none'
+  }
+}));
 
 export default function Button({ children, ...props }){
+  const { root } = useStyles(props)();
   return (
-      <MuiButton disableElevation disableFocusRipple {...props}>{children}</MuiButton>
+      <MuiButton className={root} disableElevation centerRipple disableFocusRipple {...props}>{children}</MuiButton>
   );
 }
 

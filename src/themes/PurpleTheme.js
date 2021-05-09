@@ -25,11 +25,11 @@ const theme = {
       Functional colors
     */
     primary: { 
-      main: allPalette.purple,  
+      main: allPalette.black,  
       contrastText: allPalette.white,
     },
     secondary: { 
-      main: allPalette.black,  
+      main: allPalette.purple,  
       contrastText: allPalette.white,
     },
     success: { 
