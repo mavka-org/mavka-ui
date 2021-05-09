@@ -12,7 +12,7 @@ const useStyles = props => makeStyles( theme => ({
     
   },
   outlined: {
-    borderColor: props.color ? theme.palette[props.color].main : theme.palette.primary.main,
+    borderColor: theme.palette[props.color] ? theme.palette[props.color].main : theme.palette.primary.main,
   },
   text: {
     
@@ -35,7 +35,6 @@ export function ButtonBase({ children, ...props }){
 }
 
 export default function Button({ children, ...props }){
-  console.log("🚀 ~ file: Button.js ~ line 38 ~ Button ~ props", props)
   const classes = useStyles(props)();
   const classNames = `${classes[props.variant]} ${props.info ? classes.info : ''} ${props.className}`;
   if (props.info) props.onClick = () => {} // override onClick
