@@ -12,10 +12,11 @@
     "build-storybook": "build-storybook -o docs-build -s public",
     "prepublish": "yarn build-storybook",
     "publish-storybook": "gh-pages -d storybook-static",
-    "release": "auto shipit --base-branch=main"
+    "release": "auto shipit --base-branch=prod"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

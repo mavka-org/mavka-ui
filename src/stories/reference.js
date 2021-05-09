@@ -1,25 +1,23 @@
 import React from 'react';
 
-import Button from '../../components/userInput/Button';
+import Button from '../../components/elements/Button';
 
 export default {
-  title: 'User Input/Button',
-  component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  title: 'Elements/Button',
+  component: Button
 };
 
 const Template = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   primary: true,
   label: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  secondary: true,
   label: 'Button',
 };
 
