@@ -9,29 +9,15 @@ export default {
   component: RadioInputGrid,
 };
 
-let optionLabels = ["A", "Б", "В"]
+let TwoDimenshionalList = [[<TestRadioButton selected label={"A"} />, <TestRadioButton label={"A"} />], [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]]
+let OneDimenshionalList = [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]
 let taskLabels = ["1", "2", "3"]
 
-let TwoDimenshionalList = [[<TestRadioButton />, <TestRadioButton />], [<TestRadioButton/>, <TestRadioButton />]]
-let OneDimenshionalList = [<TestRadioButton/>, <TestRadioButton />]
 
+export const Default = () => <RadioInputGrid testRadioButtonsList={TwoDimenshionalList}/>;
 
-export const Default = () => <RadioInputGrid 
-  optionLabels={optionLabels} 
-  taskLabels={taskLabels} 
-  testRadioButtonsList={TwoDimenshionalList}/>;
+export const OneDimenshional = () =>
+  <RadioInputGrid testRadioButtonsList={OneDimenshionalList} />;
 
-export const OneDimensional = () => <RadioInputGrid 
-  optionLabels={optionLabels} 
-  taskLabels={taskLabels} 
-  testRadioButtonsList={OneDimenshionalList}/>;
-
-export const NoLabels = () =>
-  <Grid container dimension="column" spacing={2}>
-    <Grid item><div>No option labels: </div></Grid>
-    <Grid item><RadioInputGrid taskLabels={taskLabels} testRadioButtonsList={TwoDimenshionalList}/>;</Grid>
-    <Grid item><div>No task labels: </div></Grid>
-    <Grid item><RadioInputGrid optionLabels={optionLabels} testRadioButtonsList={TwoDimenshionalList}/>;</Grid>
-    <Grid item><div>No labels: </div></Grid>
-    <Grid item><RadioInputGrid testRadioButtonsList={TwoDimenshionalList}/>;</Grid>
-  </Grid>;
+export const TaskLabeled = () =>
+  <RadioInputGrid testRadioButtonsList={TwoDimenshionalList} taskLabels={taskLabels} />;
