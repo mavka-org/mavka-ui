@@ -3,7 +3,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { ButtonBase } from '../../components/elements/Button';
 import PropTypes from 'prop-types';
 
-const useStyles = props => makeStyles( theme => (console.log('getBorderColor', props, getBorderColor(props.selected, props.correctness, theme)), {
+const useStyles = props => makeStyles( theme => ({
     button: {
         color: theme.palette.primary.main,
         border: `4px solid ${getBorderColor(props.selected, props.correctness, theme)}`,
@@ -39,7 +39,7 @@ function getOverfillColor(selected, correctness, theme) {
     if (selected) {
         if (correctness) return getColorByCorrectness(correctness, theme)
         else return theme.palette.alternative.grey
-    }
+    } else return null
     
 }
 
