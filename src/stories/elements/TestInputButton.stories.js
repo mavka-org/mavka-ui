@@ -10,12 +10,12 @@ export default {
 
 export const Default = () => <TestInputButton />;
 
-export const Labeled = () => <TestInputButton label={"A"}/>;
+export const Labeled = () => <TestInputButton label={"1."}/>;
 
 export const UserInput = () => <TestInputButton userInput={"This is user input"}/>;
 
 export const Correctness = () =>
   <Grid container spacing={1}>
     <Grid item><TestInputButton correctness="correct" userInput={"This is user input"} /></Grid>
-    <Grid item><TestInputButton selected correctness="incorrect" userInput={"This is user input"} /></Grid>
+    <Grid item><TestInputButton correctness="incorrect" userInput={"This is user input"} /></Grid>
   </Grid>;

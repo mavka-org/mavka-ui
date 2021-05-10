@@ -54,7 +54,7 @@ export default function RadioInputGrid({ children, ...props }){
       <Grid container spacing={1} >
 
         {testRadioButtonsList.map((radioButtonRow, idx) => {
-            return <Grid container item id="hui" spacing={1} className={classes.gridRow}>
+            return <Grid container item spacing={1} className={classes.gridRow}>
                         <FormRow radioButtonRow={radioButtonRow} taskLabel={taskLabels[idx]}/>
                     </Grid>
         })}
@@ -65,27 +65,27 @@ export default function RadioInputGrid({ children, ...props }){
 
 }
 
-// Button.propTypes = {
-//   /**
-//    * A list of TestRadioButtons to display. Can be 1- or 2-dimensional.
-//    */
-//   testRadioButtonsList: PropTypes.array.isRequired,
-//    /**
-//    * Array of strings to label tasks
-//    */
-//   taskLabels: PropTypes.array,
-//   /**
-//    * For css customization.
-//    */
-//    className: PropTypes.string,
-//   /**
-//    * The component content
-//    */
-//    children: PropTypes.node,
+RadioInputGrid.propTypes = {
+  /**
+   * A list of TestRadioButtons to display. Can be 1- or 2-dimensional.
+   */
+  testRadioButtonsList: PropTypes.array.isRequired,
+   /**
+   * Array of strings to label tasks
+   */
+  taskLabels: PropTypes.array,
+  /**
+   * For css customization.
+   */
+   className: PropTypes.string,
+  /**
+   * The component content
+   */
+   children: PropTypes.node,
 
-// };
+};
 
-// Button.defaultProps = {
-//   testRadioButtonsList: [],
-//   taskLabels: []
-// };
+RadioInputGrid.defaultProps = {
+  testRadioButtonsList: [],
+  taskLabels: []
+};
