@@ -64,12 +64,11 @@ const theme = {
       hint: allPalette.greyLight
     },
     background: { 
-      main: allPalette.purpleLight,
-      contrastText: allPalette.black,
+      default: allPalette.purpleLight,
+      paper: allPalette.white,
     },
-    surface: { 
-      main: allPalette.white, 
-      contrastText: allPalette.black 
+    common: {
+      black: allPalette.black,
     },
 
     alternative: {
