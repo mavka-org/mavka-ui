@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import MuiButton from '@material-ui/core/Button';
 import Button from './buttons/Button'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { ButtonBase } from '../../components/elements/Button';
-import PropTypes from 'prop-types';
+import { ButtonBase } from '../../components/elements/buttons/Button';
 
 const useStyles = props => makeStyles( theme => ({
     button: {
