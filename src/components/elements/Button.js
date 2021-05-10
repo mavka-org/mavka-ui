@@ -12,19 +12,23 @@ const useStyles = props => makeStyles( theme => (console.log("JHKJHJFHJHJ", prop
     
   },
   outlined: {
-    borderColor: theme.palette[props.color] ? theme.palette[props.color].main : theme.palette.primary.main,
+    borderColor: getMainColor(props, theme),
   },
   text: {
     
   },
   info: {
-    backgroundColor: get(theme.palette, props.infoBackground) || theme.palette[props.color].main,
+    backgroundColor: get(theme.palette, props.infoBackground) || getMainColor(props, theme),
     pointerEvents: 'none',
     "&:hover": {
-        backgroundColor: get(theme.palette, props.infoBackground) || theme.palette[props.color].main
+        backgroundColor: get(theme.palette, props.infoBackground) || getMainColor(props, theme)
     }
   }
 }));
+
+const getMainColor = (props, theme) => {
+  return theme.palette[props.color] ? theme.palette[props.color].main : theme.palette.primary.main
+}
 
 export function ButtonBase({ children, ...props }){
   console.log("JHKJHJFHJHJ", props.color)

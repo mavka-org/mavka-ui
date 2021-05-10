@@ -9,4 +9,4 @@ export default {
 
 export const Default = () => <ContentBlock title="This is Content Block's title">This is content block's children</ContentBlock>;
 
-export const NoTitle = () => <ContentBlock title="This is Content Block's title">This is content block's children. The content block doesn't have a title</ContentBlock>;
+export const NoTitle = () => <ContentBlock>This is content block's children. The content block doesn't have a title</ContentBlock>;
