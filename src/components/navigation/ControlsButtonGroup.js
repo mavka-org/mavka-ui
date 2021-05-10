@@ -9,7 +9,7 @@ const useStyles = props => makeStyles( theme => ({
   }
 }));
 
-export default function ControlsButtonGroup({ children, ...props }){
+export function ControlsButtonGroup({ children, ...props }){
   const classes = useStyles(props)();
   return (
     <Grid container spacing={1}>
@@ -45,3 +45,5 @@ ControlsButtonGroup.propTypes = {
    */
   collapsed: PropTypes.bool,
 };
+
+export default ControlsButtonGroup;

@@ -14,7 +14,6 @@ export default {
 
 export const Default = () => <BottomNavBar>This is a BottomNavBar with children</BottomNavBar>
 
-// TODO
 export const WithControls = () => <BottomNavBar
   controls={
     <ControlsButtonGroup

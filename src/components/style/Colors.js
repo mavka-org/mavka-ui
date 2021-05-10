@@ -72,29 +72,29 @@ const Colors = (props) => {
       <Grid className={classes.root} container spacing={3}>
         <Paper className={classes.paper} style={getColorStyle(theme.palette.background.default, theme)}>
           Background: {theme.palette.background.default}<br/>
-          theme.palette.background.main
+          theme.palette.background.default
         </Paper>
-        <Paper className={classes.paper} style={getColorStyle(theme.palette.surface.main, theme)}>
-          Surface: {theme.palette.surface.main}<br/>
-          theme.palette.surface.main
+        <Paper className={classes.paper} style={getColorStyle(theme.palette.background.paper, theme)}>
+          Background Paper: {theme.palette.background.paper}<br/>
+          theme.palette.background.paper
         </Paper>
       </Grid>
 
       <Typography variant='h4' className={classes.label}>Text</Typography>
       <Grid className={classes.root} container spacing={3}>
-        <Paper className={classes.paper} style={{background: theme.palette.surface.main, color: theme.palette.text.primary}}>
+        <Paper className={classes.paper} style={{background: theme.palette.common.white, color: theme.palette.text.primary}}>
           Primary: {theme.palette.text.primary}<br/>
           theme.palette.text.primary
         </Paper>
-        <Paper className={classes.paper} style={{background: theme.palette.surface.main, color: theme.palette.text.secondary}}>
+        <Paper className={classes.paper} style={{background: theme.palette.common.white, color: theme.palette.text.secondary}}>
           Secondary: {theme.palette.text.secondary}<br/>
           theme.palette.text.secondary
         </Paper>
-        <Paper className={classes.paper} style={{background: theme.palette.surface.main, color: theme.palette.text.disabled}}>
+        <Paper className={classes.paper} style={{background: theme.palette.common.white, color: theme.palette.text.disabled}}>
           Disabled: {theme.palette.text.disabled}<br/>
           theme.palette.text.disabled
         </Paper>
-        <Paper className={classes.paper} style={{background: theme.palette.surface.main, color: theme.palette.text.hint}}>
+        <Paper className={classes.paper} style={{background: theme.palette.common.white, color: theme.palette.text.hint}}>
           Hint: {theme.palette.text.hint}<br/>
           theme.palette.text.hint
         </Paper>

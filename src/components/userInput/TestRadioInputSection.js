@@ -6,6 +6,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
 const useStyles = props => makeStyles( theme => ({
+    root: {
+    },
     gridColumn: {
         spacing: theme.spacing(2)
     },
@@ -48,17 +50,15 @@ export default function TestRadioInputSection({ children, ...props }){
   }
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={1} >
+    <Grid container spacing={1} >
 
-        {testRadioButtonsList.map((radioButtonRow, idx) => {
-            return <Grid container item spacing={1} className={classes.gridRow}>
-                        <FormRow radioButtonRow={radioButtonRow} taskLabel={taskLabels[idx]}/>
-                    </Grid>
-        })}
+      {testRadioButtonsList.map((radioButtonRow, idx) => {
+          return <Grid container item spacing={1} className={classes.gridRow}>
+                      <FormRow radioButtonRow={radioButtonRow} taskLabel={taskLabels[idx]}/>
+                  </Grid>
+      })}
 
-      </Grid>
-    </div>
+    </Grid>
   );
 
 

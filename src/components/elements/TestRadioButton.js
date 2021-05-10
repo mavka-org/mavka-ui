@@ -32,7 +32,7 @@ const useStyles = props => makeStyles( theme => ({
   }));
 
 
-export default function TestRadioButton({ children, ...props }){
+export function TestRadioButton({ children, ...props }){
   const classes = useStyles(props)();
   const theme = useTheme();
 
@@ -101,3 +101,5 @@ function getColorByCorrectness(correctness, theme) {
     else if (correctness === "part-correct") {return theme.palette.alternative.yellow}
     else return theme.palette.alternative.grey
 }
+
+export default TestRadioButton;
