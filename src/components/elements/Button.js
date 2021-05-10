@@ -88,7 +88,6 @@ Button.propTypes = {
    * If true, the button has full width
    */
    fullWidth: PropTypes.bool,
-
 };
 
 Button.defaultProps = {

@@ -50,37 +50,37 @@ export default function TestRadioButton({ children, ...props }){
   );
 }
 
-Button.propTypes = {
-  /**
-   * Button label.
-   */
-  label: PropTypes.bool.isRequired,
-    /**
-   * If user selected the button.
-   */
-   selected: PropTypes.bool,
-  /**
-   * If the button contains the correct answer.
-   */
-  correctness: PropTypes.oneOf(['correct', 'incorrect', 'part-correct']),
-  /**
-   * Click handler
-   */
-  onClick: PropTypes.func.isRequired,
-  /**
-   * For css customization.
-   */
-   className: PropTypes.string,
-  /**
-   * The component content
-   */
-   children: PropTypes.node,
+// Button.propTypes = {
+//   /**
+//    * Button label.
+//    */
+//   label: PropTypes.bool.isRequired,
+//     /**
+//    * If user selected the button.
+//    */
+//    selected: PropTypes.bool,
+//   /**
+//    * If the button contains the correct answer.
+//    */
+//   correctness: PropTypes.oneOf(['correct', 'incorrect', 'part-correct']),
+//   /**
+//    * Click handler
+//    */
+//   onClick: PropTypes.func.isRequired,
+//   /**
+//    * For css customization.
+//    */
+//    className: PropTypes.string,
+//   /**
+//    * The component content
+//    */
+//    children: PropTypes.node,
 
-};
+// };
 
-Button.defaultProps = {
-  label: '',
-  selected: false,
-  correctness: 'incorrect',
-  onClick: () => {},
-};
+// Button.defaultProps = {
+//   label: '',
+//   selected: false,
+//   correctness: 'incorrect',
+//   onClick: () => {},
+// };
