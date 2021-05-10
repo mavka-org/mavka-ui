@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from './Button'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -14,11 +13,13 @@ const useStyles = props => makeStyles( theme => ({
     }
   }));
 
-  
-
-export default function RadioInputGrid({ children, ...props }){
+export default function TestRadioInputSection({ children, ...props }){
   const classes = useStyles(props)();
   const theme = useTheme();
+
+  // Validate props
+  let taskLabels = []
+  if (props.taskLabels) {taskLabels = props.taskLabels}
 
   let testRadioButtonsList = props.testRadioButtonsList
   // if testRadioButtonsList is one-dimensional, make it two-dimensional
@@ -26,14 +27,10 @@ export default function RadioInputGrid({ children, ...props }){
     testRadioButtonsList = [testRadioButtonsList]
   }
 
-  let taskLabels = []
-  if (props.taskLabels) {taskLabels = props.taskLabels}
-
-
   function FormRow(props) {
     const radioButtonRow = props.radioButtonRow
     let row = []
-
+    
     if (props.taskLabel) {
         row.push(<React.Fragment><Grid item >{props.taskLabel}:</Grid></React.Fragment>)
     }
@@ -63,9 +60,10 @@ export default function RadioInputGrid({ children, ...props }){
     </div>
   );
 
+
 }
 
-RadioInputGrid.propTypes = {
+TestRadioInputSection.propTypes = {
   /**
    * A list of TestRadioButtons to display. Can be 1- or 2-dimensional.
    */
@@ -85,7 +83,7 @@ RadioInputGrid.propTypes = {
 
 };
 
-RadioInputGrid.defaultProps = {
+TestRadioInputSection.defaultProps = {
   testRadioButtonsList: [],
   taskLabels: []
 };

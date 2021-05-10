@@ -2,8 +2,8 @@ import React from 'react';
 
 import { BottomNavBar } from '../../components/navigation/BottomNavBar';
 import { ControlsButtonGroup } from '../../components/navigation/ControlsButtonGroup';
-import { RadioInputGrid } from '../../components/elements/RadioInputGrid';
 import { TestRadioButton } from '../../components/elements/TestRadioButton';
+import TestRadioInputSection from './../../components/userInput/TestRadioInputSection';
 
 export default {
   title: 'Navigation/BottomNavBar',
@@ -18,6 +18,6 @@ export const WithControls = () => <BottomNavBar
   />
 
 export const WithUserInput = () => <BottomNavBar 
-  userInput={<RadioInputGrid testRadioButtonsList={[<TestRadioButton label='A'/>, <TestRadioButton label='Б'/>, <TestRadioButton label='В'/>, <TestRadioButton label='Г'/>]}/>}
+  userInput={<TestRadioInputSection testRadioButtonsList={[<TestRadioButton label='A'/>, <TestRadioButton label='Б'/>, <TestRadioButton label='В'/>, <TestRadioButton label='Г'/>]}/>}
   controls={<ControlsButtonGroup label='Перевірити'/>}
 />

@@ -28,27 +28,6 @@ const useStyles = props => makeStyles( theme => ({
         "z-index": "-1",
     },
   }));
-
-function getBorderColor(selected, correctness, theme) {
-    if (correctness) return getColorByCorrectness(correctness, theme)
-    else if (selected) return theme.palette.primary.main
-    else return theme.palette.alternative.grey
-}
-
-function getOverfillColor(selected, correctness, theme) {
-    if (selected) {
-        if (correctness) return getColorByCorrectness(correctness, theme)
-        else return theme.palette.alternative.grey
-    } else return null
-    
-}
-
-function getColorByCorrectness(correctness, theme) {
-    if (correctness === "correct") {return theme.palette.alternative.green}
-    else if (correctness === "incorrect") {return theme.palette.alternative.red}
-    else if (correctness === "part-correct") {return theme.palette.alternative.yellow}
-    else return theme.palette.alternative.grey
-}
   
 
 export default function TestRadioButton({ children, ...props }){
@@ -97,3 +76,26 @@ TestRadioButton.defaultProps = {
   correctness: undefined,
   onClick: () => {},
 };
+
+
+// HELPER FUNCTIONS -------------------------------------
+function getBorderColor(selected, correctness, theme) {
+    if (correctness) return getColorByCorrectness(correctness, theme)
+    else if (selected) return theme.palette.primary.main
+    else return theme.palette.alternative.grey
+}
+
+function getOverfillColor(selected, correctness, theme) {
+    if (selected) {
+        if (correctness) return getColorByCorrectness(correctness, theme)
+        else return theme.palette.alternative.grey
+    } else return null
+    
+}
+
+function getColorByCorrectness(correctness, theme) {
+    if (correctness === "correct") {return theme.palette.alternative.green}
+    else if (correctness === "incorrect") {return theme.palette.alternative.red}
+    else if (correctness === "part-correct") {return theme.palette.alternative.yellow}
+    else return theme.palette.alternative.grey
+}
