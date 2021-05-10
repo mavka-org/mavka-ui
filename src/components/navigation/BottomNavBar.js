@@ -16,9 +16,9 @@ export function BottomNavBar({ children, ...props }){
     <Surface>
       <PageContainer>
         <Grid container direction='column' spacing={1}>
-          <Grid item>{children}</Grid>
-          {/* <Grid item>{props.userInput}</Grid> */}
-          <Grid item>{props.controls}</Grid>
+          { children ? <Grid item>{children}</Grid> : null }
+          {/* { props.userInput ? <Grid item>{props.userInput}</Grid> : null } */}
+          { props.controls ? <Grid item>{props.controls}</Grid> : null }
         </Grid>
       </PageContainer>
     </Surface>
