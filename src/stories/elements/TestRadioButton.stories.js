@@ -22,4 +22,6 @@ export const Correctness = () =>
     <Grid item><TestRadioButton selected correctness="incorrect" label="A" /></Grid>
     <Grid item><TestRadioButton selected correctness="part-correct" label="A" /></Grid>
     <Grid item><TestRadioButton correctness="correct" label="A" /></Grid>
+    <Grid item><TestRadioButton correctness="incorrect" label="A" /></Grid>
+    <Grid item><TestRadioButton correctness="part-correct" label="A" /></Grid>
   </Grid>;
