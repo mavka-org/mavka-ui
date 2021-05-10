@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Grid } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
-import IconButton from '../../components/elements/IconButton';
+import IconButton from '../../../components/elements/buttons/IconButton';
 
 export default {
-  title: 'Elements/IconButton',
+  title: 'Elements/Buttons/IconButton',
   component: IconButton
 };
 

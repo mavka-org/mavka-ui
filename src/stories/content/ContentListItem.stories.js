@@ -8,12 +8,12 @@ export default {
   component: ContentListItem
 };
 
-export const Default = () => <ContentListItem label='A'>This is content list item's children</ContentListItem>;
+export const Default = () => <ContentListItem label='A'> (x-4) </ContentListItem>;
 
 export const ContentList = () => 
 <Grid container direction="column" spacing={1}>
-  <Grid item><ContentListItem label='A'>This is content list item's children</ContentListItem></Grid>
-  <Grid item><ContentListItem label='Б'>This is content list item's children</ContentListItem></Grid>
-  <Grid item><ContentListItem label='В'>This is content list item's children</ContentListItem></Grid>
-  <Grid item><ContentListItem label='Г'>This is content list item's children</ContentListItem></Grid>
+  <Grid item><ContentListItem label='A'>(x-4)</ContentListItem></Grid>
+  <Grid item><ContentListItem label='Б'>(x-4)</ContentListItem></Grid>
+  <Grid item><ContentListItem label='В'>(x-4)</ContentListItem></Grid>
+  <Grid item><ContentListItem label='Г'>(x-4)</ContentListItem></Grid>
 </Grid>;
