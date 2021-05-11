@@ -5,19 +5,11 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = props => makeStyles( theme => ({
   base: {
+    padding: 0,
     "&:hover": {
       backgroundColor: 'transparent'
     }
   },
-  contained: {
-    
-  },
-  outlined: {
-    borderColor: theme.palette[props.color] ? theme.palette[props.color].main : null,
-  },
-  text: {
-    
-  }
 }));
 
 export function IconButtonBase({ children, ...props }){
@@ -65,7 +57,7 @@ IconButton.propTypes = {
 };
 
 IconButton.defaultProps = {
-  color: 'default',
+  color: 'primary',
   variant: 'contained',
   size: 'medium',
   disabled: false,
