@@ -6,12 +6,18 @@ export const decorators = [
 	muiTheme([PurpleTheme])
 ];
 
-// export const parameters = {
-//   actions: { argTypesRegex: "^on[A-Z].*" },
-//   controls: {
-//     matchers: {
-//       color: /(background|color)$/i,
-//       date: /Date$/,
-//     },
-//   },
-// }
+export const parameters = {
+	viewMode: 'docs',
+	options: {
+    storySort: {
+      order: ['Introduction', 'Style', 'Elements', 'Content', 'User Input', 'Layout', 'Navigation', 'User Feedback'],
+    },
+  },
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+}

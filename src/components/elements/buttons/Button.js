@@ -12,19 +12,23 @@ const useStyles = props => makeStyles( theme => ({
     
   },
   outlined: {
-    borderColor: theme.palette[props.color].main,
+    borderColor: getMainColor(props, theme),
   },
   text: {
     
   },
   info: {
-    backgroundColor: get(theme.palette, props.infoBackground) || theme.palette[props.color].main,
+    backgroundColor: get(theme.palette, props.infoBackground) || getMainColor(props, theme),
     pointerEvents: 'none',
     "&:hover": {
-        backgroundColor: get(theme.palette, props.infoBackground) || theme.palette[props.color].main
+        backgroundColor: get(theme.palette, props.infoBackground) || getMainColor(props, theme)
     }
   }
 }));
+
+const getMainColor = (props, theme) => {
+  return theme.palette[props.color] ? theme.palette[props.color].main : theme.palette.primary.main
+}
 
 export function ButtonBase({ children, ...props }){
   const classes = useStyles(props)();
@@ -47,7 +51,7 @@ Button.propTypes = {
   /**
    * Background color of the button
    */
-   color: PropTypes.string,
+  color: PropTypes.string,
   /**
    * The variant of the button.
    */
@@ -59,11 +63,11 @@ Button.propTypes = {
   /**
    * If true, the button will be disabled but preserve its look
    */
-   info: PropTypes.bool,
-   /**
+  info: PropTypes.bool,
+  /**
    * Background color of the button only when info = true.
    */
-    infoBackground: PropTypes.string,
+  infoBackground: PropTypes.string,
   /**
    * If true, the button will be disabled.
    */
@@ -84,7 +88,6 @@ Button.propTypes = {
    * If true, the button has full width
    */
    fullWidth: PropTypes.bool,
-
 };
 
 Button.defaultProps = {

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Grid } from '@material-ui/core';
-import Button from '../../components/elements/Button';
+import Button from '../../../components/elements/buttons/Button';
 
 export default {
-  title: 'Elements/Button',
+  title: 'Elements/Buttons/Button',
   component: Button
 };
 

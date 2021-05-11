@@ -8,18 +8,20 @@ export default {
   component: TestRadioButton,
 };
 
-export const Default = () => <TestRadioButton />;
+export const Default = () => <TestRadioButton label="A"/>;
 
 export const Selected = () =>
   <Grid container spacing={1}>
-    <Grid item><TestRadioButton /></Grid>
-    <Grid item><TestRadioButton selected /></Grid>
+    <Grid item><TestRadioButton label="A" /></Grid>
+    <Grid item><TestRadioButton selected label="A" /></Grid>
   </Grid>;
 
 export const Correctness = () =>
   <Grid container spacing={1}>
-    <Grid item><TestRadioButton selected correctness="correct" /></Grid>
-    <Grid item><TestRadioButton selected correctness="incorrect" /></Grid>
-    <Grid item><TestRadioButton selected correctness="part-correct" /></Grid>
-    <Grid item><TestRadioButton correctness="correct" /></Grid>
+    <Grid item><TestRadioButton selected correctness="correct" label="A" /></Grid>
+    <Grid item><TestRadioButton selected correctness="incorrect" label="A" /></Grid>
+    <Grid item><TestRadioButton selected correctness="part-correct" label="A" /></Grid>
+    <Grid item><TestRadioButton correctness="correct" label="A" /></Grid>
+    <Grid item><TestRadioButton correctness="incorrect" label="A" /></Grid>
+    <Grid item><TestRadioButton correctness="part-correct" label="A" /></Grid>
   </Grid>;

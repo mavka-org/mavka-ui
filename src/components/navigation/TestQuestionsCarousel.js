@@ -9,29 +9,14 @@ const useStyles = props => makeStyles( theme => ({
   }
 }));
 
-export function ControlsButtonGroup({ children, ...props }){
+export function TestQuestionsCarousel({ children, ...props }){
   const classes = useStyles(props)();
   return (
-    <Grid container spacing={1}>
-      {
-        props.collapsed ? props.collapsedButton :
-        <>
-          <Grid item>
-            {props.expendedButtons[0]}
-          </Grid>
-          <Grid item className={classes.growItem}>
-            {props.expendedButtons[1]}
-          </Grid>
-          <Grid item>
-            {props.expendedButtons[2]}
-          </Grid>
-        </>
-      }
-    </Grid>
+    <>ToDo</>
   );
 }
 
-ControlsButtonGroup.propTypes = {
+TestQuestionsCarousel.propTypes = {
   /**
    * An array of THREE (!) controls buttons
    */
@@ -46,4 +31,4 @@ ControlsButtonGroup.propTypes = {
   collapsed: PropTypes.bool,
 };
 
-export default ControlsButtonGroup;
+export default TestQuestionsCarousel;
