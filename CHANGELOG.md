@@ -1,3 +1,19 @@
+# v0.1.3 (Tue May 11 2021)
+
+#### 🐛 Bug Fix
+
+- Removed carousel [#7](https://github.com/mavka-org/mavka-ui/pull/7) ([@arlaptiev](https://github.com/arlaptiev))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ 7842dd5d41262f58c80f0f8f798e50a09254bf66 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 1
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.1 (Tue May 11 2021)
 
 #### 🐛 Bug Fix
