@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Grid } from '@material-ui/core';
 import TestRadioInputSection from '../../components/userInput/TestRadioInputSection';
 import TestRadioButton from '../../components/elements/TestRadioButton';
 

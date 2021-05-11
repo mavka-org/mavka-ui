@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Fade, Slide, Grow } from '@material-ui/core';
@@ -35,34 +35,20 @@ const useStyles = props => makeStyles( theme => ({
 }));
 
 export function TestTopNavBar({ children, ...props }){
-  const [collapsed, setCollapsed] = useState(props.collapsed);
   const classes = useStyles(props)();
-
-  useEffect(() => {
-    if (collapsed || props.noCollapse) {
-      return;
-    }
-  
-    const handleScroll = () => {
-      setCollapsed(true);
-    }
-  
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [collapsed, props.noCollapse]);
 
   return (
     <PageContainer>
       <div className={classes.header}>
 
-          <Fade in={!collapsed}>
+          <Fade in={!props.collapsed}>
             <Grid className={classes.headerGrid} container alignItems='center'>
               <Grid item><IconButton onClick={props.exitOnClick}><ExitToAppIcon className={classes.exitToAppIcon}/></IconButton></Grid>
             </Grid>
           </Fade>
 
-          <Fade in={collapsed}>
-            <Grid className={`${classes.headerGrid} ${classes.clickable}`} container alignItems='center' onClick={() => {setCollapsed(false)}}>
+          <Fade in={props.collapsed}>
+            <Grid className={`${classes.headerGrid} ${classes.clickable}`} container alignItems='center' onClick={() => {props.setCollapsed(false)}}>
               <Grid item><MenuIcon/></Grid>
               <Grid className={classes.collapsedTitle} item>{props.collapsedTitle}</Grid>
               <Grid item><StatusIcon className={classes.statusIcon}/></Grid>
@@ -71,11 +57,11 @@ export function TestTopNavBar({ children, ...props }){
 
       </div>
 
-      <Slide in={!collapsed} timeout={300} unmountOnExit mountOnEnter>
+      <Slide in={!props.collapsed} timeout={300} unmountOnExit mountOnEnter>
         <div>
-          <Grow in={!collapsed} timeout={200}>
+          <Grow in={!props.collapsed} timeout={200}>
             <div>
-              <Fade in={!collapsed} timeout={200}>
+              <Fade in={!props.collapsed} timeout={200}>
                 <div>{children}</div>
               </Fade>
             </div>
@@ -89,25 +75,31 @@ export function TestTopNavBar({ children, ...props }){
 
 TestTopNavBar.propTypes = {
   /**
+   * When true, the TestTopNavBar collapses. Must hold parent's state
+   */
+   collapsed: PropTypes.bool,
+   /**
+   * Parent's setState function on collapsed state
+   */
+    setCollapsed: PropTypes.func,
+  /**
    * Handler for the exit button click
    */
    exitOnClick: PropTypes.func,
   /**
-   * If true, the TestTopNavBar starts collapsed
-   */
-  collapsed: PropTypes.bool,
-  /**
    * Title that shows up in the collapsed version of the TestTopNavBar
    */
   collapsedTitle: PropTypes.string,
-   /**
-   * If true, the TestTopNavBar cannot be collapsed or expanded
-   */
-  noCollapse: PropTypes.bool,
   /**
    * Optional content that goes into the subheader of the TestTopNavBar
    */
   children: PropTypes.node,
 };
+
+TestTopNavBar.defaultTypes = {
+  collapsed: false,
+  setCollapsed: () => {},
+  exitOnClick: () => {},
+}
 
 export default TestTopNavBar;
