@@ -35,7 +35,7 @@ const useStyles = props => makeStyles( theme => ({
 }));
 
 export function TestTopNavBar({ children, ...props }){
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(props.collapsed);
   const classes = useStyles(props)();
 
   useEffect(() => {
@@ -89,15 +89,23 @@ export function TestTopNavBar({ children, ...props }){
 
 TestTopNavBar.propTypes = {
   /**
-   * ControlsButtonGroup
+   * Handler for the exit button click
    */
-  controls: PropTypes.array,
+   exitOnClick: PropTypes.func,
   /**
-   * User input field
+   * If true, the TestTopNavBar starts collapsed
    */
-  userInput: PropTypes.node,
+  collapsed: PropTypes.bool,
   /**
-   * Content that goes inside of the TestTopNavBar
+   * Title that shows up in the collapsed version of the TestTopNavBar
+   */
+  collapsedTitle: PropTypes.string,
+   /**
+   * If true, the TestTopNavBar cannot be collapsed or expanded
+   */
+  noCollapse: PropTypes.bool,
+  /**
+   * Optional content that goes into the subheader of the TestTopNavBar
    */
   children: PropTypes.node,
 };
