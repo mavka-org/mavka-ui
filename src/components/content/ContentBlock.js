@@ -9,7 +9,7 @@ const useStyles = props => makeStyles( theme => ({
   },
 }));
 
-export default function ContentBlock({ children, ...props }){
+export function ContentBlock({ children, ...props }){
   const classes = useStyles(props)();
   return (
     <Grid direction='column' container spacing={1}>
@@ -30,3 +30,5 @@ ContentBlock.propTypes = {
    children: PropTypes.node.isRequired,
 
 };
+
+export default ContentBlock;

@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = props => makeStyles( theme => ({
   }));
 
-export default function TestRadioInputSection({ children, ...props }){
+export function TestInputTextSection({ children, ...props }){
   const classes = useStyles(props)();
   const theme = useTheme();
 
@@ -16,3 +16,5 @@ export default function TestRadioInputSection({ children, ...props }){
   );
 
 }
+
+export default TestInputTextSection;

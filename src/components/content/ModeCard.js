@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { ButtonBase } from '../elements/buttons/Button';
 import get from 'get-value'
+
 const useStyles = props => makeStyles( theme => ({
   root: {
     backgroundColor: get(theme.palette, props.color) ,
@@ -13,7 +14,7 @@ const useStyles = props => makeStyles( theme => ({
   },
 }));
 
-export default function ModeCard({ children, ...props }){
+export function ModeCard({ children, ...props }){
   const classes = useStyles(props)();
   return (
     <Grid container direction='row' alignItems="flex-start"  spacing={1} className={classes.root}>
@@ -49,3 +50,5 @@ ModeCard.propTypes = {
    children: PropTypes.node.isRequired,
 
 };
+
+export default ModeCard;

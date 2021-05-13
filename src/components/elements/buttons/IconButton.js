@@ -20,7 +20,7 @@ export function IconButtonBase({ children, ...props }){
   );
 }
 
-export default function IconButton({ children, ...props }){
+export function IconButton({ children, ...props }){
   const classes = useStyles(props)();
   const classNames = `${classes[props.variant]} ${props.className}`;
   return (
@@ -63,3 +63,5 @@ IconButton.defaultProps = {
   disabled: false,
   onClick: () => {},
 };
+
+export default IconButton;

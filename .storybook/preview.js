@@ -1,10 +1,10 @@
-import { muiTheme } from 'storybook-addon-material-ui'
-
 import PurpleTheme from '../src/themes/PurpleTheme'
+import { addDecorator } from '@storybook/react';
+import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
-export const decorators = [
-	muiTheme([PurpleTheme])
-];
+addDecorator((story) => (
+  <ThemeProvider theme={responsiveFontSizes(createMuiTheme(PurpleTheme))}>{story()}</ThemeProvider>
+));
 
 export const parameters = {
 	viewMode: 'docs',

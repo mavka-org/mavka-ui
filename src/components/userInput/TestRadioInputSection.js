@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../elements/buttons/Button';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 
 const useStyles = props => makeStyles( theme => ({
     root: {
@@ -16,7 +14,7 @@ const useStyles = props => makeStyles( theme => ({
     }
   }));
 
-export default function TestRadioInputSection({ children, ...props }){
+export function TestRadioInputSection({ children, ...props }){
   const classes = useStyles(props)();
   const theme = useTheme();
 
@@ -88,3 +86,5 @@ TestRadioInputSection.defaultProps = {
   testRadioButtonsList: [],
   taskLabels: []
 };
+
+export default TestRadioInputSection;

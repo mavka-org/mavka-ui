@@ -20,6 +20,21 @@ const allPalette = {
 
 const theme = {
   themeName: 'Purple Theme',
+  typography: {
+    fontFamily: [
+      'SF UI Display',
+      'Roboto',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  },
   palette: {
     /*
       Functional colors

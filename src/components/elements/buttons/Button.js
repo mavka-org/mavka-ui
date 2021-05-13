@@ -38,7 +38,7 @@ export function ButtonBase({ children, ...props }){
 );
 }
 
-export default function Button({ children, ...props }){
+export function Button({ children, ...props }){
   const classes = useStyles(props)();
   const classNames = `${classes[props.variant]} ${props.info ? classes.info : ''} ${props.className}`;
   if (props.info) props.onClick = () => {} // override onClick
@@ -98,3 +98,5 @@ Button.defaultProps = {
   disabled: false,
   onClick: () => {},
 };
+
+export default Button;

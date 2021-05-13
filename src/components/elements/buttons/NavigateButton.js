@@ -15,7 +15,7 @@ const useStyles = props => makeStyles( theme => ({
   }
 }));
 
-export default function NavigateButton({ children, ...props }){
+export function NavigateButton({ children, ...props }){
   const classes = useStyles(props)();
   return (
     <Button {...props} className={classes.root}>
@@ -34,3 +34,5 @@ NavigateButton.propTypes = {
    */
    onClick: PropTypes.func,
 };
+
+export default NavigateButton;

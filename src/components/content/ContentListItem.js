@@ -3,15 +3,13 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { ButtonBase } from '../elements/buttons/Button';
-import get from 'get-value'
 const useStyles = props => makeStyles( theme => ({
   root: {
    
   },
 }));
 
-export default function ContentListItem({ children, ...props }){
+export function ContentListItem({ children, ...props }){
   const classes = useStyles(props)();
   return (
     <Grid container direction='row' className={classes.root}>
@@ -27,3 +25,5 @@ ContentListItem.propTypes = {
    children: PropTypes.isRequired,
 
 };
+
+export default ContentListItem;
