@@ -6,7 +6,7 @@ const useStyles = props => makeStyles( theme => ({
   }));
 
 
-export default function TestInputText({ children, ...props }){
+export function TestInputText({ children, ...props }){
   const classes = useStyles(props)();
   const theme = useTheme();
 
@@ -63,3 +63,5 @@ function getColorByCorrectness(correctness, theme) {
     else if (correctness === "part-correct") {return theme.palette.alternative.yellow}
     else return theme.palette.alternative.grey
 }
+
+export default TestInputText;
