@@ -34,51 +34,86 @@ const theme = {
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
+    h1: {
+      fontWeight: 900,
+    },
+    h2: {
+      fontWeight: 800,
+
+    },
+    h3: {
+      fontWeight: 700,
+
+    },
+    h4: {
+      fontWeight: 600,
+
+    },
+    h5: {
+      fontWeight: 500,
+
+    },
+    h6: {
+      fontWeight: 400,
+
+    },
+    body1:{
+
+    },
+    body2:{
+
+    },
+    subtitle1:{
+
+    },
+    subtitle2:{
+
+    },
   },
   palette: {
     /*
       Functional colors
     */
-    primary: { 
-      main: allPalette.black,  
+    primary: {
+      main: allPalette.black,
       contrastText: allPalette.white,
     },
-    secondary: { 
-      main: allPalette.purple,  
+    secondary: {
+      main: allPalette.purple,
       contrastText: allPalette.white,
     },
-    success: { 
-      main: allPalette.green, 
+    success: {
+      main: allPalette.green,
       contrastText: allPalette.white,
     },
-    successLight: { 
-      main: allPalette.greenLight, 
+    successLight: {
+      main: allPalette.greenLight,
       contrastText: allPalette.black,
     },
-    error: { 
-      main: allPalette.red,  
+    error: {
+      main: allPalette.red,
       contrastText: allPalette.white
     },
-    errorLight: { 
-      main: allPalette.redLight,  
+    errorLight: {
+      main: allPalette.redLight,
       contrastText: allPalette.black
     },
-    warning: { 
-      main: allPalette.yellow, 
+    warning: {
+      main: allPalette.yellow,
       contrastText: allPalette.white,
     },
-    info: { 
-      main: allPalette.yellowLight, 
+    info: {
+      main: allPalette.yellowLight,
       contrastText: allPalette.black,
     },
-    
-    text: { 
+
+    text: {
       primary: allPalette.black,
       secondary: allPalette.grey,
       disabled: allPalette.greyLight,
       hint: allPalette.greyLight
     },
-    background: { 
+    background: {
       default: allPalette.purpleLight,
       paper: allPalette.white,
     },
