@@ -1,3 +1,23 @@
+# v0.1.3 (Thu May 13 2021)
+
+#### 🐛 Bug Fix
+
+- minor config fix [#9](https://github.com/mavka-org/mavka-ui/pull/9) ([@arlaptiev](https://github.com/arlaptiev))
+- Exports set up for distribution [#8](https://github.com/mavka-org/mavka-ui/pull/8) ([@arlaptiev](https://github.com/arlaptiev))
+- Removed carousel [#7](https://github.com/mavka-org/mavka-ui/pull/7) ([@arlaptiev](https://github.com/arlaptiev))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ ca82fcadbfe0b4c78ea0d0b2c65dbe72e90d5bff 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+- Deploying to prod from @ 8ba2feecb89616158d032f3564f02e4b03936b7a 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+- Deploying to prod from @ 7842dd5d41262f58c80f0f8f798e50a09254bf66 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 1
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.1 (Tue May 11 2021)
 
 #### 🐛 Bug Fix
