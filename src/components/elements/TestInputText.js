@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import { getColorByCorrectness, getBackgroundColorByCorrectness } from '../../helpers';
 
 const useStyles = props => makeStyles(theme => ({
   root: {
@@ -52,34 +53,5 @@ TestInputText.defaultProps = {
   userInput: undefined,
   correctness: undefined,
 };
-
-
-// HELPER FUNCTIONS -------------------------------
-function getBorderColor(selected, correctness, theme) {
-  if (correctness) return getColorByCorrectness(correctness, theme)
-  else if (selected) return theme.palette.primary.main
-  else return theme.palette.alternative.grey
-}
-
-function getOverfillColor(selected, correctness, theme) {
-  if (selected) {
-    if (correctness) return getColorByCorrectness(correctness, theme)
-    else return theme.palette.alternative.grey
-  } else return null
-
-}
-
-function getColorByCorrectness(correctness, theme) {
-  if (correctness === "correct") { return theme.palette.alternative.green }
-  else if (correctness === "incorrect") { return theme.palette.alternative.red }
-  else if (correctness === "part-correct") { return theme.palette.alternative.yellow }
-  else return theme.palette.alternative.grey
-}
-function getBackgroundColorByCorrectness(correctness, theme) {
-  if (correctness === "correct") { return theme.palette.alternative.greenLight }
-  else if (correctness === "incorrect") { return theme.palette.alternative.redLight }
-  else if (correctness === "part-correct") { return theme.palette.alternative.yellowLight }
-  else return theme.palette.alternative.white
-}
 
 export default TestInputText;

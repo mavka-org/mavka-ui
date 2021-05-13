@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import { useTheme } from '@material-ui/core/styles';
 import { TestTopNavBar } from '../../components/navigation/TestTopNavBar';
 import TestRadioInputSection from '../../components/userInput/TestRadioInputSection';
 import TestRadioButton from '../../components/elements/TestRadioButton';
@@ -12,6 +13,7 @@ export default {
 
 export const Default = () => { 
   const [collapsed, setCollapsed] = useState(false);
+  const theme = useTheme();
 
   useEffect(() => {
     if (collapsed) {
@@ -33,9 +35,9 @@ export const Default = () => {
       setCollapsed={setCollapsed} 
       collapsed={collapsed}
     >
-      <Typography variant='h3'>Завдання 1</Typography>
-      <Typography variant='body2' fontWeight='fontWeightMedium'>2019 основна секція</Typography>
-      <TestRadioInputSection
+      <Typography variant='h3' style={{ paddingTop: theme.spacing(1) }}>Завдання 1</Typography>
+      <Typography variant='body2'>2019 основна секція</Typography>
+      <TestRadioInputSection style={{ paddingTop: theme.spacing(2) }}
         testRadioButtonsList={[
           <TestRadioButton label="1"/>, <TestRadioButton label="2"/>, <TestRadioButton label="3"/>, <TestRadioButton label="4"/>, <TestRadioButton label="5"/>, 
           <TestRadioButton label="6"/>, <TestRadioButton label="7"/>, <TestRadioButton label="8"/>, <TestRadioButton label="9"/>, <TestRadioButton label="10"/>, 

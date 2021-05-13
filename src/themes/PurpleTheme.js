@@ -35,14 +35,14 @@ const theme = {
       '"Segoe UI Symbol"',
     ].join(','),
     h1: {
-      fontWeight: 900,
+      fontWeight: 700,
     },
     h2: {
-      fontWeight: 800,
+      fontWeight: 700,
 
     },
     h3: {
-      fontWeight: 700,
+      fontWeight: 600,
 
     },
     h4: {
@@ -50,11 +50,11 @@ const theme = {
 
     },
     h5: {
-      fontWeight: 500,
+      fontWeight: 600,
 
     },
     h6: {
-      fontWeight: 400,
+      fontWeight: 600,
 
     },
     body1:{
