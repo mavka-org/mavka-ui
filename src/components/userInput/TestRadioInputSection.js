@@ -14,7 +14,7 @@ const useStyles = props => makeStyles( theme => ({
     }
   }));
 
-export function TestRadioInputSection({ children, ...props }){
+export function TestRadioInputSection({ children, style, ...props }){
   const classes = useStyles(props)();
   const theme = useTheme();
 
@@ -48,7 +48,7 @@ export function TestRadioInputSection({ children, ...props }){
   }
 
   return (
-    <Grid container spacing={1} >
+    <Grid container spacing={1} style={style}>
 
       {testRadioButtonsList.map((radioButtonRow, idx) => {
           return <Grid container item spacing={1} className={classes.gridRow}>

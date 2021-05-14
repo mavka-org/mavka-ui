@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Fade, Slide, Grow } from '@material-ui/core';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Grid, Fade, Slide, Grow, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import StatusIcon from '@material-ui/icons/FiberManualRecord';
 import PageContainer from '../layout/PageContainer';
 import IconButton from '../elements/buttons/IconButton';
+import { getColorByCorrectness } from '../../helpers';
 
 const useStyles = props => makeStyles( theme => ({
   header: {
@@ -36,6 +37,7 @@ const useStyles = props => makeStyles( theme => ({
 
 export function TestTopNavBar({ children, ...props }){
   const classes = useStyles(props)();
+  const theme = useTheme();
 
   return (
     <PageContainer>
@@ -50,8 +52,8 @@ export function TestTopNavBar({ children, ...props }){
           <Fade in={props.collapsed}>
             <Grid className={`${classes.headerGrid} ${classes.clickable}`} container alignItems='center' onClick={() => {props.setCollapsed(false)}}>
               <Grid item><MenuIcon/></Grid>
-              <Grid className={classes.collapsedTitle} item>{props.collapsedTitle}</Grid>
-              <Grid item><StatusIcon className={classes.statusIcon}/></Grid>
+              <Grid className={classes.collapsedTitle} item><Typography variant='h6'>{props.collapsedTitle}</Typography></Grid>
+              <Grid item><StatusIcon className={classes.statusIcon} style={{fill: getColorByCorrectness(props.correctness, theme)}}/></Grid>
             </Grid>
           </Fade>
 
@@ -82,6 +84,10 @@ TestTopNavBar.propTypes = {
    * Parent's setState function on collapsed state
    */
     setCollapsed: PropTypes.func,
+    /**
+   * Correctness of the current question. Determines the color of the question status indicator
+   */
+     correctness: PropTypes.func,
   /**
    * Handler for the exit button click
    */
@@ -98,6 +104,7 @@ TestTopNavBar.propTypes = {
 
 TestTopNavBar.defaultTypes = {
   collapsed: false,
+  correctness: null,
   setCollapsed: () => {},
   exitOnClick: () => {},
 }
