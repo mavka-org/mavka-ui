@@ -20,5 +20,3 @@ export * from './components/navigation/TestTopNavBar';
 
 export * from './components/userInput/TestInputTextSection';
 export * from './components/userInput/TestRadioInputSection';
-
-console.log('>>> Started successfully')
