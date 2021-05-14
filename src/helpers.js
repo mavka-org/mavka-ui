@@ -1,14 +1,18 @@
 export function getBorderColor(selected, correctness, theme) {
-  if (correctness) return getColorByCorrectness(correctness, theme)
-  else if (selected) return theme.palette.primary.main
-  else return theme.palette.alternative.grey
+  if (selected) {
+    if (!correctness) return theme.palette.primary.main
+    else return getColorByCorrectness(correctness, theme)
+  } else if (correctness === "correct") return theme.palette.alternative.green
+  return theme.palette.alternative.grey
 }
 
 export function getOverfillColor(selected, correctness, theme) {
+
   if (selected) {
-    if (correctness) return getColorByCorrectness(correctness, theme)
-    else return theme.palette.alternative.grey
-  } else return null
+    if (!correctness) return theme.palette.primary.main
+    else return getColorByCorrectness(correctness, theme)
+  } 
+  return null
 
 }
 
