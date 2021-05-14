@@ -1,3 +1,22 @@
+# v0.1.5 (Fri May 14 2021)
+
+#### 🐛 Bug Fix
+
+- Retry release [#12](https://github.com/mavka-org/mavka-ui/pull/12) ([@arlaptiev](https://github.com/arlaptiev))
+- Fixed babel-loader version conflict between Storybook and CRA + new components [#11](https://github.com/mavka-org/mavka-ui/pull/11) ([@Mortyy1](https://github.com/Mortyy1) [@arlaptiev](https://github.com/arlaptiev))
+- Mortyy1's components fixes [#10](https://github.com/mavka-org/mavka-ui/pull/10) ([@Mortyy1](https://github.com/Mortyy1) [@arlaptiev](https://github.com/arlaptiev))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ 3630ef0a018a97c2d146310cae09cfa44a25fdf2 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 2
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+- Mortyy1 ([@Mortyy1](https://github.com/Mortyy1))
+
+---
+
 # v0.1.3 (Thu May 13 2021)
 
 #### 🐛 Bug Fix
