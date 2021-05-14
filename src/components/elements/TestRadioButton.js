@@ -3,18 +3,19 @@ import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { ButtonBase } from '../../components/elements/buttons/Button';
 import { getBorderColor, getOverfillColor } from '../../helpers';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 const useStyles = props => makeStyles( theme => ({
     button: {
-        color: theme.palette.primary.main,
         border: `4px solid ${getBorderColor(props.selected, props.correctness, theme)}`,
+        color: getBorderColor(props.selected, props.correctness, theme),
         'min-width': '35px',
         'max-width': '35px',
         'min-height': '35px',
         'max-height': '35px',
         'border-radius': "100%",
-        "position": "relative"
-
+        "position": "relative",
     },
     overfill: {
         "background-color": getOverfillColor(props.selected, props.correctness, theme),
@@ -26,7 +27,6 @@ const useStyles = props => makeStyles( theme => ({
         width: "100%",
         height: "100%",
         'border-radius': "100%",
-        "z-index": "-1",
     },
   }));
 
@@ -35,10 +35,17 @@ export function TestRadioButton({ children, ...props }){
   const classes = useStyles(props)();
   const theme = useTheme();
 
+  console.log("props.label", props.label)
+
 
   return (
       <div>
-          <ButtonBase className={classes.button} {...props}>{props.label}<div className={classes.overfill}></div></ButtonBase>
+          <ButtonBase className={classes.button} {...props}>
+          <Typography component="div">
+            <Box fontWeight="fontWeightMedium" >{props.label}</Box>
+           </Typography>
+          <div className={classes.overfill}></div>
+          </ButtonBase>
       </div>
   );
 }
