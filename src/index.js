@@ -9,7 +9,7 @@ export * from './components/elements/buttons/Button';
 export * from './components/elements/buttons/IconButton';
 export * from './components/elements/buttons/NavigateButton';
 export * from './components/elements/TestInputText';
-export * from './components/elements/TestInputButton';
+export * from './components/elements/TestRadioButton';
 
 export * from './components/layout/PageContainer';
 export * from './components/layout/Surface';
@@ -20,3 +20,5 @@ export * from './components/navigation/TestTopNavBar';
 
 export * from './components/userInput/TestInputTextSection';
 export * from './components/userInput/TestRadioInputSection';
+
+console.log('>>> Started successfully')
