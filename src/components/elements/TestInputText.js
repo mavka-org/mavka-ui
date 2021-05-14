@@ -5,7 +5,7 @@ import { getColorByCorrectness, getBackgroundColorByCorrectness } from '../../he
 import '../../fonts/style.css'
 const useStyles = props => makeStyles(theme => ({
   root: {
-    width: '136px',
+    width: '100px',
     height: '25px',
     border: `3px solid ${getColorByCorrectness(props.correctness, theme)}`,
     borderRadius:'16px',
@@ -26,7 +26,7 @@ export function TestInputText({ children, ...props }) {
 
 
   return (
-    <input className={classes.root} value={props.userInput}/>
+    <input className={classes.root} placeholder value={props.userInput}/>
   );
 }
 
