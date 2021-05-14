@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { getColorByCorrectness, getBackgroundColorByCorrectness } from '../../helpers';
-
+import '../../fonts/style.css'
 const useStyles = props => makeStyles(theme => ({
   root: {
     width: '136px',
@@ -12,6 +12,7 @@ const useStyles = props => makeStyles(theme => ({
     outline:'none',
     paddingLeft:'14px',
     fontFamily:'SF UI Display',
+    fontWeight:'600',
     fontSize:'14px',
     color:`${getColorByCorrectness(props.correctness, theme)}`,
     backgroundColor:`${getBackgroundColorByCorrectness(props.correctness, theme)}`
