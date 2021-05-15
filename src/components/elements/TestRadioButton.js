@@ -35,9 +35,6 @@ export function TestRadioButton({ children, ...props }){
   const classes = useStyles(props)();
   const theme = useTheme();
 
-  console.log("props.label", props.label)
-
-
   return (
       <div>
           <ButtonBase className={classes.button} {...props}>

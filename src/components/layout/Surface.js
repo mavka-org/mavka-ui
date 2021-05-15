@@ -7,6 +7,7 @@ const useStyles = props => makeStyles( theme => ({
     border: `1px solid ${theme.palette.common.black}`,
     borderTopLeftRadius: theme.shape.borderRadius,
     borderTopRightRadius: theme.shape.borderRadius,
+    background: theme.palette.background.paper,
   }
 }));
 

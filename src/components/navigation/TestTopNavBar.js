@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Grid, Fade, Slide, Grow, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import ExitToAppIcon from '@material-ui/icons/ExitToAppRounded';
+import ExpandLessIcon from '@material-ui/icons/ExpandLessRounded';
 import StatusIcon from '@material-ui/icons/FiberManualRecord';
 import PageContainer from '../layout/PageContainer';
 import IconButton from '../elements/buttons/IconButton';
@@ -32,6 +33,16 @@ const useStyles = props => makeStyles( theme => ({
   },
   exitToAppIcon: {
     transform: 'scaleX(-1)'
+  },
+  standardBottomPadding: {
+    paddingBottom: theme.spacing(1)
+  },
+  collapseButton: {
+    margin: 'auto',
+    display: 'block'
+  },
+  fullWidth: {
+    width: '100%'
   }
 }));
 
@@ -59,12 +70,15 @@ export function TestTopNavBar({ children, ...props }){
 
       </div>
 
-      <Slide in={!props.collapsed} timeout={300} unmountOnExit mountOnEnter>
+      <Slide in={!props.collapsed} timeout={100} unmountOnExit mountOnEnter>
         <div>
-          <Grow in={!props.collapsed} timeout={200}>
+          <Grow in={!props.collapsed} timeout={50}>
             <div>
-              <Fade in={!props.collapsed} timeout={200}>
-                <div>{children}</div>
+              <Fade in={!props.collapsed} timeout={50}>
+                <div>
+                  <div className={classes.standardBottomPadding}>{children}</div>
+                  <div className={classes.fullWidth}><IconButton className={classes.collapseButton} onClick={() => {props.setCollapsed(true)}}><ExpandLessIcon/></IconButton></div>
+                </div>
               </Fade>
             </div>
           </Grow>
