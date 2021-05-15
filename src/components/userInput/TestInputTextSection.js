@@ -12,7 +12,7 @@ const useStyles = props => makeStyles(theme => ({
 export function TestInputTextSection({ children, ...props }) {
   const classes = useStyles(props)();
   const theme = useTheme();
-  console.log(props)
+
   return (
     <>
       {props.testInputsList.map(elem =>
