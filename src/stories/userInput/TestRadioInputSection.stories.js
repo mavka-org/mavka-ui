@@ -8,11 +8,6 @@ export default {
   component: TestRadioInputSection,
 };
 
-let TwoDimenshionalList = [[<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />], [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]]
-let OneDimenshionalList = [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]
-let taskLabels = ["1", "2", "3"]
-
-
 export const Default = () => <TestRadioInputSection testRadioButtonsList={
                                   [[<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />],
                                    [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]]}
