@@ -8,15 +8,18 @@ export default {
   component: TestRadioInputSection,
 };
 
-let TwoDimenshionalList = [[<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />], [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]]
-let OneDimenshionalList = [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]
-let taskLabels = ["1", "2", "3"]
-
-
-export const Default = () => <TestRadioInputSection testRadioButtonsList={TwoDimenshionalList}/>;
+export const Default = () => <TestRadioInputSection testRadioButtonsList={
+                                  [[<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />],
+                                   [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]]}
+                              />;
 
 export const OneDimenshional = () =>
-  <TestRadioInputSection testRadioButtonsList={OneDimenshionalList} />;
+  <TestRadioInputSection testRadioButtonsList={[[<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />],
+                                              [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]]}
+  />;
 
 export const TaskLabeled = () =>
-  <TestRadioInputSection testRadioButtonsList={TwoDimenshionalList} taskLabels={taskLabels} />;
+  <TestRadioInputSection taskLabels={["1", "2", "3"]}
+                         testRadioButtonsList={[[<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />],
+                                                [<TestRadioButton label={"A"} />, <TestRadioButton label={"A"} />]]}  
+  />;

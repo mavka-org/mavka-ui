@@ -1,19 +1,21 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { getColorByCorrectness, getBackgroundColorByCorrectness } from '../../helpers';
+import { getColorByCorrectness, getBackgroundColorByCorrectness, getInputColorByCorrectness } from '../../helpers';
+import '../../fonts/style.css'
 
 const useStyles = props => makeStyles(theme => ({
   root: {
-    width: '136px',
+    width: '90px',
     height: '25px',
-    border: `3px solid ${getColorByCorrectness(props.correctness, theme)}`,
+    border: `3px solid ${getInputColorByCorrectness(props.correctness, props.userInput, theme)}`,
     borderRadius:'16px',
     outline:'none',
     paddingLeft:'14px',
     fontFamily:'SF UI Display',
+    fontWeight:'600',
     fontSize:'14px',
-    color:`${getColorByCorrectness(props.correctness, theme)}`,
+    color:`${getInputColorByCorrectness(props.correctness, props.userInput, theme)}`,
     backgroundColor:`${getBackgroundColorByCorrectness(props.correctness, theme)}`
   },
 }));
@@ -25,7 +27,7 @@ export function TestInputText({ children, ...props }) {
 
 
   return (
-    <input className={classes.root} value={props.userInput}/>
+    <input className={classes.root} placeholder={props.userInput || 'Відповідь...'} value={props.userInput}/>
   );
 }
 

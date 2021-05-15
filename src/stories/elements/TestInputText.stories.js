@@ -10,10 +10,10 @@ export default {
 
 export const Default = () => <TestInputText />;
 
-export const UserInput = () => <TestInputText userInput={"This is user input"}/>;
+export const UserInput = () => <TestInputText userInput={"input"}/>;
 
 export const Correctness = () =>
   <Grid container spacing={1}>
-    <Grid item><TestInputText correctness="correct" userInput={"This is user input"} /></Grid>
-    <Grid item><TestInputText correctness="incorrect" userInput={"This is user input"} /></Grid>
+    <Grid item><TestInputText correctness="correct" userInput={"correct"} /></Grid>
+    <Grid item><TestInputText correctness="incorrect" userInput={"incorrect"} /></Grid>
   </Grid>;
