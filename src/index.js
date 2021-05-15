@@ -1,7 +1,7 @@
 export * from './components/content/ContentBlock';
 export * from './components/content/ContentInfoBlock';
 export * from './components/content/ContentListItem';
-export * from './components/content/Dialog';
+export * from './components/content/CustomDialog';
 export * from './components/content/List';
 export * from './components/content/ModeCard';
 
