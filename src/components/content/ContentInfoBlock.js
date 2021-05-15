@@ -4,11 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { Box, Card, CardContent } from '@material-ui/core';
+import get from 'get-value'
 const useStyles = props => makeStyles(theme => ({
   root: {
     width:"100%",
     padding:'15px',
-    backgroundColor: theme.palette.alternative.yellowLight
+    backgroundColor: get(theme.palette, props.color),
   },
  
 }));
@@ -17,7 +18,7 @@ export function ContentInfoBlock({ children, ...props }) {
   const classes = useStyles(props)();
   return (
     <Grid container className={classes.root}>
-     💡 {children}
+     {props.emoji}&nbsp;{children}
     </Grid>
   );
 }
