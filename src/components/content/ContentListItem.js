@@ -12,7 +12,7 @@ const useStyles = props => makeStyles( theme => ({
 export function ContentListItem({ children, ...props }){
   const classes = useStyles(props)();
   return (
-    <Grid container direction='row' className={classes.root}>
+    <Grid container direction='row' alignItems="center" className={classes.root}>
       <Grid item style={{marginRight:'15px'}}><Typography>{props.label}:</Typography></Grid>
       <Grid item><Typography>{children}</Typography></Grid>
     </Grid>
