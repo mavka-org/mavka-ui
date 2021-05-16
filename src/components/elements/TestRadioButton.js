@@ -51,11 +51,11 @@ TestRadioButton.propTypes = {
   /**
    * Button label.
    */
-  label: PropTypes.bool.isRequired,
+  label: PropTypes.string.isRequired,
     /**
    * If user selected the button.
    */
-   selected: PropTypes.bool,
+  selected: PropTypes.bool,
   /**
    * If the button contains the correct answer.
    */

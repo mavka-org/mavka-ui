@@ -24,7 +24,7 @@ export function ContentInfoBlock({ children, ...props }) {
 }
 
 ContentInfoBlock.propTypes = {
-  children: PropTypes.isRequired,
+  children: PropTypes.node,
 };
 
 export default ContentInfoBlock;

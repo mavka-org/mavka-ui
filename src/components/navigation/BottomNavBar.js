@@ -29,7 +29,7 @@ BottomNavBar.propTypes = {
   /**
    * ControlsButtonGroup
    */
-  controls: PropTypes.array,
+  controls: PropTypes.object,
   /**
    * User input field
    */
