@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { getColorByCorrectness, getBackgroundColorByCorrectness, getInputColorByCorrectness } from '../../helpers';
-import '../../fonts/style.css'
+// import '../../fonts/style.css'
 
 const useStyles = props => makeStyles(theme => ({
   root: {
