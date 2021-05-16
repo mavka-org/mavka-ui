@@ -27,7 +27,7 @@ export function TestInputText({ children, ...props }) {
 
 
   return (
-    <input className={classes.root} placeholder={props.userInput || 'Відповідь...'} value={props.userInput}/>
+    <input className={classes.root} placeholder={props.userInput || 'Відповідь...'} value={props.userInput} onChange={(event) => props.onChange(event)} />
   );
 }
 
@@ -35,7 +35,7 @@ TestInputText.propTypes = {
   /**
    * Driven user input.
    */
-  userInput: PropTypes.bool.isRequired,
+  userInput: PropTypes.string,
   /**
    * If the field is correct.
    */
@@ -48,6 +48,12 @@ TestInputText.propTypes = {
    * The component content
    */
   children: PropTypes.node,
+  /**
+   * On input change function
+   */
+  onChange: PropTypes.func,
+
+
 
 };
 
