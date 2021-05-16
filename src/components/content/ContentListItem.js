@@ -22,7 +22,7 @@ export function ContentListItem({ children, ...props }){
 ContentListItem.propTypes = {
    label: PropTypes.string,
 
-   children: PropTypes.isRequired,
+   children: PropTypes.node,
 
 };
 

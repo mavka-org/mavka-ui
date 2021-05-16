@@ -29,7 +29,26 @@ export function CustomDialog({ children, ...props }) {
 }
 
 CustomDialog.propTypes = {
-  children: PropTypes.isRequired,
+  /**
+   * The component content
+   */
+  children: PropTypes.node,
+  /**
+   * Function to run on dialog open
+   */
+  handleClickOpen: PropTypes.func,
+  /**
+   * Function to run on dialog close
+   */
+  handleClose: PropTypes.func,
+  /**
+   * State of the dialog window
+   */
+  open: PropTypes.bool,
+  /**
+   * State of the dialog window
+   */
+  open: PropTypes.bool,
 };
 
 export default CustomDialog;

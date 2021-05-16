@@ -2,13 +2,13 @@ import React from 'react';
 
 import CustomDialog from '../../components/content/CustomDialog';
 import Button from '../../components/elements/buttons/Button';
+import Typography from '@material-ui/core/Typography';
 
 export default {
-  title: 'Content/Dialog',
+  title: 'Content/CustomDialog',
   component: CustomDialog
 };
 
-// TODO from Material UI
 export const Default = () => {
   const [open, setOpen] = React.useState(false);
 
@@ -19,13 +19,17 @@ export const Default = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <>
+      <Typography>This is a Dialog with children, controlled by a Button</Typography>
       <Button onClick={() => setOpen(prev => !prev)}>Dialog</Button>
-      <CustomDialog handleClickOpen={handleClickOpen} handleClose={handleClose} open={open} title="Mavka ZNO">This is a Default Dialog that pops up with a message for a user</CustomDialog>
+      <CustomDialog handleClickOpen={handleClickOpen} handleClose={handleClose} open={open} title="This is Dialog title">
+        This is a Dialog chilldren
+      </CustomDialog>
     </>
   )
 };
 
-export const ListDialog = () => <CustomDialog>This is a dialog with a title and a list in it</CustomDialog>;
 
+export const NoButton = () => <CustomDialog open={false} title="This is Dialog title" >This is a dialog children</CustomDialog>;
