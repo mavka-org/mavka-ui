@@ -28,7 +28,7 @@ export const WithControls = () => <BottomNavBar
 />
 
 export const WithUserInput = () => <BottomNavBar
-  userInput={<TestRadioInputSection testRadioButtonsList={[<TestRadioButton label='A'/>, <TestRadioButton label='Б'/>, <TestRadioButton label='В'/>, <TestRadioButton label='Г'/>]}/>}
+  userInput={<TestRadioInputSection centerContent testRadioButtonsList={[<TestRadioButton label='A'/>, <TestRadioButton label='Б'/>, <TestRadioButton label='В'/>, <TestRadioButton label='Г'/>]}/>}
   controls={
     <ControlsButtonGroup
       collapsedButton={<Button onClick={() => {alert('Collapsed clicked')}} color='secondary' fullWidth>Завершити тест</Button>}
@@ -42,7 +42,7 @@ export const WithUserInput = () => <BottomNavBar
 />
 
 export const WithChildren = () => <BottomNavBar
-  userInput={<TestRadioInputSection testRadioButtonsList={[<TestRadioButton label='A'/>, <TestRadioButton label='Б'/>, <TestRadioButton label='В'/>, <TestRadioButton label='Г'/>]}/>}
+  userInput={<TestRadioInputSection centerContent testRadioButtonsList={[<TestRadioButton label='A'/>, <TestRadioButton label='Б'/>, <TestRadioButton label='В'/>, <TestRadioButton label='Г'/>]}/>}
   controls={
     <ControlsButtonGroup
       collapsedButton={<Button onClick={() => {alert('Collapsed clicked')}} color='secondary' fullWidth>Завершити тест</Button>}

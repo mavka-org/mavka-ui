@@ -10,7 +10,8 @@ const useStyles = props => makeStyles( theme => ({
         spacing: theme.spacing(2)
     },
     gridRow: {
-        "align-items": "center"
+        "align-items": "center",
+        justifyContent: props.centerContent ? 'center' : 'normal'
     }
   }));
 
@@ -38,7 +39,7 @@ export function TestRadioInputSection({ children, style, ...props }){
 
     row.push(radioButtonRow.map((radioButton) => {
         return <React.Fragment>
-                    <Grid item align-items={"center"} >
+                    <Grid item>
                         {radioButton}
                     </Grid>
                 </React.Fragment>

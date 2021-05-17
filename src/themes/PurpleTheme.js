@@ -136,6 +136,9 @@ const theme = {
       greyLight: allPalette.greyLight,
     }
   },
+  shape: {
+    borderRadius: 16
+  },
 }
 
 export default theme
