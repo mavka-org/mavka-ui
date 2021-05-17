@@ -1,8 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Dialog, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Dialog, DialogContent, DialogTitle } from '@material-ui/core';
+
+const useStyles = props => makeStyles(theme => ({
+  dialogContent: {
+    paddingTop: 0
+  }
+}));
 
 export function CustomDialog({ children, ...props }) {
+  const classes = useStyles(props)();
   return (
       <Dialog
         open={props.open}
@@ -11,10 +19,8 @@ export function CustomDialog({ children, ...props }) {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">{props.title}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
+        <DialogContent className={classes.dialogContent}>
             {children}
-          </DialogContentText>
         </DialogContent>
       </Dialog>
   );
