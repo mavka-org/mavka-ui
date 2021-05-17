@@ -1,3 +1,21 @@
+# v0.1.12 (Mon May 17 2021)
+
+#### 🐛 Bug Fix
+
+- Minor components fixes [#19](https://github.com/mavka-org/mavka-ui/pull/19) ([@Mortyy1](https://github.com/Mortyy1) [@arlaptiev](https://github.com/arlaptiev))
+- Mortyy1 [#18](https://github.com/mavka-org/mavka-ui/pull/18) ([@Mortyy1](https://github.com/Mortyy1))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ f0476f7b15978781a62e85c8595ec36ee5ca7894 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 2
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+- Mortyy1 ([@Mortyy1](https://github.com/Mortyy1))
+
+---
+
 # v0.1.9 (Mon May 17 2021)
 
 #### 🐛 Bug Fix
