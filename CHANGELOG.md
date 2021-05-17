@@ -1,3 +1,22 @@
+# v0.1.9 (Mon May 17 2021)
+
+#### 🐛 Bug Fix
+
+- Testing workflows... [#17](https://github.com/mavka-org/mavka-ui/pull/17) ([@arlaptiev](https://github.com/arlaptiev))
+- restart package build [#16](https://github.com/mavka-org/mavka-ui/pull/16) ([@ToniaZakorchemna](https://github.com/ToniaZakorchemna))
+- Prop Type fixes [#15](https://github.com/mavka-org/mavka-ui/pull/15) ([@ToniaZakorchemna](https://github.com/ToniaZakorchemna))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ ca568cb6784d5b2bceedf1b584cbda20c992b3db 🚀 ([@ToniaZakorchemna](https://github.com/ToniaZakorchemna))
+
+#### Authors: 2
+
+- [@ToniaZakorchemna](https://github.com/ToniaZakorchemna)
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.8 (Sat May 15 2021)
 
 #### 🐛 Bug Fix
