@@ -32,7 +32,8 @@ const useStyles = props => makeStyles( theme => ({
     width: '10px'
   },
   exitToAppIcon: {
-    transform: 'scaleX(-1)'
+    transform: 'scaleX(-1)',
+    verticalAlign: 'middle',
   },
   standardBottomPadding: {
     paddingBottom: theme.spacing(1)
@@ -45,7 +46,6 @@ const useStyles = props => makeStyles( theme => ({
     width: '100%'
   }
 }));
-
 export function TestTopNavBar({ children, ...props }){
   const classes = useStyles(props)();
   const theme = useTheme();
