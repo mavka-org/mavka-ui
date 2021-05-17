@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { ButtonBase } from '../elements/buttons/Button';
 import get from 'get-value'
 
 const useStyles = props => makeStyles( theme => ({
@@ -24,7 +23,7 @@ export function ModeCard({ children, ...props }){
       <Grid item >
         <Grid item><Typography>{props.title}</Typography></Grid>
         <Grid item style={{margin:'10px 0'}}><Typography>{props.subtitle}</Typography></Grid>
-        <Grid item><ButtonBase size="medium" color="primary" variant="contained"><Typography>{props.buttonText}</Typography></ButtonBase></Grid>
+        <Grid item>{props.buttonProp}</Grid>
       </Grid>
     </Grid>
   );
