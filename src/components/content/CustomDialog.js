@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { Box, Card, CardContent, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
+import { Dialog, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
 import { Button } from '../elements/buttons/Button';
 const useStyles = props => makeStyles(theme => ({
 
