@@ -5,24 +5,25 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import get from 'get-value'
 
-const useStyles = props => makeStyles( theme => ({
+const useStyles = props => makeStyles(theme => ({
   root: {
-    backgroundColor: get(theme.palette, props.color) ,
+    backgroundColor: get(theme.palette, props.color),
     borderRadius: '8px',
-    padding:'15px 30px'
+    padding: '15px 30px',
+    flexFlow:'nowrap'
   },
 }));
 
-export function ModeCard({ children, ...props }){
+export function ModeCard({ children, ...props }) {
   const classes = useStyles(props)();
   return (
-    <Grid container direction='row' alignItems="flex-start"  spacing={1} className={classes.root}>
-      <Grid item style={{marginRight:'20px'}}>
-      <p style={{fontSize:'48px', margin:'0'}}>{props.iconText}</p>
+    <Grid container direction='row' alignItems="flex-start" spacing={1} className={classes.root}>
+      <Grid item style={{ marginRight: '20px' }}>
+        <p style={{ fontSize: '48px', margin: '0' }}>{props.iconText}</p>
       </Grid>
       <Grid item >
         <Grid item><Typography>{props.title}</Typography></Grid>
-        <Grid item style={{margin:'10px 0'}}><Typography>{props.subtitle}</Typography></Grid>
+        <Grid item style={{ margin: '10px 0' }}><Typography>{props.subtitle}</Typography></Grid>
         <Grid item>{props.buttonProp}</Grid>
       </Grid>
     </Grid>
@@ -46,7 +47,7 @@ ModeCard.propTypes = {
   /**
    * The component children content
    */
-   children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 
 };
 
