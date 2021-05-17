@@ -8,10 +8,10 @@ export default {
     component: ContentInfoBlock
 };
 
-export const Default = () => <ContentInfoBlock color="alternative.yellowLight"></ContentInfoBlock>;
+export const Default = () => <ContentInfoBlock color="alternative.yellowLight">Thi is block's children!</ContentInfoBlock>;
 
 export const Color = () =>
     <Grid container direction="column" spacing={2}>
-        <Grid item><ContentInfoBlock color="alternative.redLight"><Typography variant="body1">Primary</Typography></ContentInfoBlock></Grid>
-        <Grid item><ContentInfoBlock color="alternative.blueLight" emoji="💡 "><Typography variant="body1">Secondary</Typography></ContentInfoBlock></Grid>
+        <Grid item><ContentInfoBlock color="alternative.redLight">Primary</ContentInfoBlock></Grid>
+        <Grid item><ContentInfoBlock color="alternative.blueLight">Secondary</ContentInfoBlock></Grid>
     </Grid>;

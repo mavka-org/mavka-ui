@@ -8,8 +8,8 @@ import get from 'get-value'
 const useStyles = props => makeStyles(theme => ({
   root: {
     backgroundColor: get(theme.palette, props.color),
-    borderRadius: '8px',
-    padding: '15px 30px',
+    borderRadius: theme.shape.borderRadius,
+    padding: `${theme.spacing(2)} ${theme.spacing(4)}`,
     flexFlow:'nowrap'
   },
 }));
@@ -22,7 +22,7 @@ export function ModeCard({ children, ...props }) {
         <p style={{ fontSize: '48px', margin: '0' }}>{props.iconText}</p>
       </Grid>
       <Grid item >
-        <Grid item><Typography>{props.title}</Typography></Grid>
+        <Grid item><Typography><strong>{props.title}</strong></Typography></Grid>
         <Grid item style={{ margin: '10px 0' }}><Typography>{props.subtitle}</Typography></Grid>
         <Grid item>{props.buttonProp}</Grid>
       </Grid>
