@@ -1,8 +1,7 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { getColorByCorrectness, getBackgroundColorByCorrectness, getInputColorByCorrectness } from '../../helpers';
-// import '../../fonts/style.css'
+import { getBackgroundColorByCorrectness, getInputColorByCorrectness } from '../../helpers';
 
 const useStyles = props => makeStyles(theme => ({
   root: {
@@ -23,8 +22,6 @@ const useStyles = props => makeStyles(theme => ({
 
 export function TestInputText({ children, ...props }) {
   const classes = useStyles(props)();
-  const theme = useTheme();
-
 
   return (
     <input className={classes.root} placeholder={props.userInput || 'Відповідь...'} value={props.userInput} readOnly={props.readOnly} onChange={(event) => props.onChange(event)} />
