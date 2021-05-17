@@ -1,3 +1,22 @@
+# v0.1.14 (Mon May 17 2021)
+
+#### 🐛 Bug Fix
+
+- Spacing fixes [#23](https://github.com/mavka-org/mavka-ui/pull/23) ([@Mortyy1](https://github.com/Mortyy1) [@arlaptiev](https://github.com/arlaptiev))
+- Mortyy1 [#22](https://github.com/mavka-org/mavka-ui/pull/22) ([@Mortyy1](https://github.com/Mortyy1))
+- Mortyy1 [#21](https://github.com/mavka-org/mavka-ui/pull/21) ([@Mortyy1](https://github.com/Mortyy1))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ 9e3ac42e136fc19312ff9d0c5c50309e485507cc 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 2
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+- Mortyy1 ([@Mortyy1](https://github.com/Mortyy1))
+
+---
+
 # v0.1.13 (Mon May 17 2021)
 
 #### 🐛 Bug Fix
