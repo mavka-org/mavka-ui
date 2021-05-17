@@ -8,13 +8,18 @@ import PageContainer from '../layout/PageContainer';
 
 const useStyles = props => makeStyles( theme => ({
   root: {
+    position: 'fixed',
+    zIndex:'999',
+    left:'0',
+    bottom:'0',
+    width:'100%',
   }
 }));
 
 export function BottomNavBar({ children, ...props }){
   const classes = useStyles(props)();
   return (
-    <Surface>
+    <Surface className={classes.root}>
       <PageContainer>
         <Grid container direction='column' spacing={1}>
           { children ? <Grid item>{children}</Grid> : null }

@@ -4,7 +4,7 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = props => makeStyles( theme => ({
   root: {
-    border: `1px solid ${theme.palette.common.black}`,
+    borderTop: `1px solid ${theme.palette.common.black}`,
     borderTopLeftRadius: theme.shape.borderRadius,
     borderTopRightRadius: theme.shape.borderRadius,
     background: theme.palette.background.paper,

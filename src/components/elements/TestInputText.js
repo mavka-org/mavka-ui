@@ -27,7 +27,7 @@ export function TestInputText({ children, ...props }) {
 
 
   return (
-    <input className={classes.root} placeholder={props.userInput || 'Відповідь...'} value={props.userInput} onChange={(event) => props.onChange(event)} />
+    <input className={classes.root} placeholder={props.userInput || 'Відповідь...'} value={props.userInput} readOnly={props.readOnly} onChange={(event) => props.onChange(event)} />
   );
 }
 
@@ -52,6 +52,8 @@ TestInputText.propTypes = {
    * On input change function
    */
   onChange: PropTypes.func,
+  
+  readOnly: PropTypes.bool,
 
 
 

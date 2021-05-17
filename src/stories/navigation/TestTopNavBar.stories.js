@@ -14,6 +14,7 @@ export default {
 export const Default = () => { 
   const [collapsed, setCollapsed] = useState(false);
   const theme = useTheme();
+  console.log("🚀 ~ file: TestTopNavBar.stories.js ~ line 17 ~ Default ~ theme", theme)
 
   useEffect(() => {
     if (collapsed) {
