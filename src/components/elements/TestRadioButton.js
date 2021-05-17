@@ -8,12 +8,12 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = props => makeStyles( theme => ({
     button: {
-        border: `4px solid ${getBorderColor(props.selected, props.correctness, theme)}`,
+        border: `3px solid ${getBorderColor(props.selected, props.correctness, theme)}`,
         color: getBorderColor(props.selected, props.correctness, theme),
-        'min-width': '35px',
-        'max-width': '35px',
-        'min-height': '35px',
-        'max-height': '35px',
+        'min-width': '30px',
+        'max-width': '30px',
+        'min-height': '30px',
+        'max-height': '30px',
         'border-radius': "100%",
         "position": "relative",
     },
@@ -38,8 +38,8 @@ export function TestRadioButton({ children, ...props }){
   return (
       <div>
           <ButtonBase className={classes.button} {...props}>
-          <Typography component="div">
-            <Box fontWeight="fontWeightMedium" >{props.label}</Box>
+          <Typography component="div" style={{position:'relative', left:'0.5px', top:'-0.5px'}}>
+            <Box fontWeight="fontWeightBold" >{props.label}</Box>
            </Typography>
           <div className={classes.overfill}></div>
           </ButtonBase>

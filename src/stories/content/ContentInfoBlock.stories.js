@@ -8,7 +8,7 @@ export default {
     component: ContentInfoBlock
 };
 
-export const Default = () => <ContentInfoBlock color="alternative.yellowLight"> <Typography variant="body1" >This is content info block's children</Typography></ContentInfoBlock>;
+export const Default = () => <ContentInfoBlock color="alternative.yellowLight"></ContentInfoBlock>;
 
 export const Color = () =>
     <Grid container direction="column" spacing={2}>
