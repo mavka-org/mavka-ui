@@ -16,7 +16,7 @@ const useStyles = props => makeStyles(theme => ({
 export function ContentBlock({ children, ...props }) {
   const classes = useStyles(props)();
   return (
-    <Grid className={classes.root} direction='column' container spacing={1}>
+    <Grid className={classes.root} direction='column' container>
       <Grid item container>{props.emoji} {props.emoji ? <span>&nbsp;</span>  : null} <Typography variant="body1">{props.title}</Typography></Grid>
       <Grid item container>{children}</Grid>
     </Grid>

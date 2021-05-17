@@ -58,6 +58,7 @@ const theme = {
 
     },
     body1:{
+      fontWeight: 600,
 
     },
     body2:{
@@ -114,7 +115,8 @@ const theme = {
       hint: allPalette.greyLight
     },
     background: {
-      default: allPalette.purpleLight,
+      default: allPalette.white,
+      alternative: allPalette.purpleLight,
       paper: allPalette.white,
     },
     common: {
@@ -138,6 +140,13 @@ const theme = {
   },
   shape: {
     borderRadius: 16
+  },
+  overrides: {
+    MuiLink: {
+      root: {
+        textDecoration: 'none',
+      },
+    },
   },
 }
 
