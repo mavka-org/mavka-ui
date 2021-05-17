@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = props => makeStyles( theme => ({
     root: {
@@ -34,7 +35,7 @@ export function TestRadioInputSection({ children, style, ...props }){
     let row = []
 
     if (props.taskLabel) {
-        row.push(<React.Fragment><Grid item >{props.taskLabel}:</Grid></React.Fragment>)
+        row.push(<React.Fragment><Grid item><Typography><strong>{props.taskLabel}:</strong></Typography></Grid></React.Fragment>)
     }
 
     row.push(radioButtonRow.map((radioButton) => {

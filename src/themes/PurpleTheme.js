@@ -58,7 +58,6 @@ const theme = {
 
     },
     body1:{
-      fontWeight: 600,
 
     },
     body2:{

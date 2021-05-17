@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Grid } from '@material-ui/core';
 import TestInputTextSection from '../../components/userInput/TestInputTextSection';
 import TestInputText from './../../components/elements/TestInputText';
 

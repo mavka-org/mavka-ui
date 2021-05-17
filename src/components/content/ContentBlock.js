@@ -8,7 +8,7 @@ import get from 'get-value';
 const useStyles = props => makeStyles(theme => ({
   root: {
     width: "100%",
-    padding: '15px',
+    padding: theme.spacing(2),
     backgroundColor: get(theme.palette, props.color),
   },
 }));
@@ -17,8 +17,8 @@ export function ContentBlock({ children, ...props }) {
   const classes = useStyles(props)();
   return (
     <Grid className={classes.root} direction='column' container>
-      <Grid item container>{props.emoji} {props.emoji ? <span>&nbsp;</span>  : null} <Typography variant="body1">{props.title}</Typography></Grid>
-      <Grid item container>{children}</Grid>
+      <Grid item container><Typography variant="body1"><strong>{props.title}</strong></Typography></Grid>
+      <Grid item container><Typography variant="body1">{children}</Typography></Grid>
     </Grid>
   );
 }
@@ -31,8 +31,7 @@ ContentBlock.propTypes = {
   /**
    * The component children content
    */
-  children: PropTypes.node.isRequired,
-  color: PropTypes.string
+  children: PropTypes.node.isRequired
 };
 
 export default ContentBlock;
