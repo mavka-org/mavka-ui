@@ -12,7 +12,7 @@ export function PageContainer({ children, ...props }){
   const classes = useStyles(props)();
   const classNames = `${classes.root} ${props.className}`;
   return (
-    <Container className={classNames}>
+    <Container maxWidth="sm" className={classNames}>
       {children}
     </Container>
   );

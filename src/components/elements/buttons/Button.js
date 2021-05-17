@@ -6,7 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = props => makeStyles( theme => ({
   base: {
-    textTransform: 'none'
+    textTransform: 'none',
+    borderRadius: '1000px'
   },
   contained: {
     
