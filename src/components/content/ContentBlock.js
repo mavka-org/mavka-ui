@@ -14,7 +14,7 @@ export function ContentBlock({ children, ...props }){
   return (
     <Grid direction='column' container spacing={1}>
       <Grid item><Typography>{props.title}</Typography></Grid>
-      <Grid item>{children}</Grid>
+      <Grid item><Typography>{children}</Typography></Grid>
     </Grid>
   );
 }
