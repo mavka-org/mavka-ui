@@ -32,7 +32,8 @@ const useStyles = props => makeStyles( theme => ({
     width: '10px'
   },
   exitToAppIcon: {
-    transform: 'scaleX(-1)'
+    transform: 'scaleX(-1)',
+    verticalAlign: 'middle'
   },
   standardBottomPadding: {
     paddingBottom: theme.spacing(1)
