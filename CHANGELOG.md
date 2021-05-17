@@ -1,3 +1,19 @@
+# v0.1.15 (Mon May 17 2021)
+
+#### 🐛 Bug Fix
+
+- modecard contentblock contentinfoblock fixes [#24](https://github.com/mavka-org/mavka-ui/pull/24) ([@arlaptiev](https://github.com/arlaptiev))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ a96207e9650d2f1be8829e0b5cc97b3caf68b773 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 1
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.14 (Mon May 17 2021)
 
 #### 🐛 Bug Fix
