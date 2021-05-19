@@ -24,7 +24,7 @@ export function TestInputText({ children, ...props }) {
   const classes = useStyles(props)();
 
   return (
-    <input className={classes.root} placeholder={props.userInput || 'Відповідь...'} value={props.userInput} readOnly={props.readOnly} onChange={(event) => props.onChange(event)} />
+    <input className={classes.root} placeholder={props.userInput || null} value={props.userInput} readOnly={props.readOnly} onChange={(event) => props.onChange(event)} />
   );
 }
 

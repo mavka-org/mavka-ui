@@ -17,10 +17,10 @@ export function getOverfillColor(selected, correctness, theme) {
 }
 
 export function getColorByCorrectness(correctness, theme) {
-    if (correctness === "correct") { return theme.palette.alternative.green }
-    else if (correctness === "incorrect") { return theme.palette.alternative.red }
-    else if (correctness === "part-correct") { return theme.palette.alternative.yellow }
-    else return theme.palette.alternative.grey
+  if (correctness === "correct") { return theme.palette.alternative.green }
+  else if (correctness === "incorrect") { return theme.palette.alternative.red }
+  else if (correctness === "part-correct") { return theme.palette.alternative.yellow }
+  else return theme.palette.alternative.grey
 
 }
 export function getInputColorByCorrectness(correctness, userInput, theme) {
@@ -30,7 +30,10 @@ export function getInputColorByCorrectness(correctness, userInput, theme) {
     else if (correctness === "part-correct") { return theme.palette.alternative.yellow }
     else return theme.palette.common.black
   } else {
-    return theme.palette.alternative.grey
+    if (correctness === "correct") { return theme.palette.alternative.green }
+    else if (correctness === "incorrect") { return theme.palette.alternative.red }
+    else if (correctness === "part-correct") { return theme.palette.alternative.yellow }
+    else return theme.palette.alternative.grey
   }
 
 }

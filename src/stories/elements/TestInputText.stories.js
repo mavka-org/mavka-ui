@@ -15,5 +15,13 @@ export const UserInput = () => <TestInputText userInput={"input"}/>;
 export const Correctness = () =>
   <Grid container spacing={1}>
     <Grid item><TestInputText correctness="correct" userInput={"correct"} /></Grid>
+    <Grid item><TestInputText correctness="incorrect" userInput={"incorrect"} /></Grid>
+    <Grid item><TestInputText correctness="correct" /></Grid>
+    <Grid item><TestInputText correctness="incorrect"/></Grid>
+  </Grid>;
+
+export const ReadOnly = () =>
+  <Grid container spacing={1}>
+    <Grid item><TestInputText correctness="correct" readOnly={true} userInput={"correct"} /></Grid>
     <Grid item><TestInputText correctness="incorrect" readOnly={true} userInput={"incorrect"} /></Grid>
   </Grid>;
