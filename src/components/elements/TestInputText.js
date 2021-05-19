@@ -1,20 +1,20 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { getBackgroundColorByCorrectness, getInputColorByCorrectness } from '../../helpers';
+import { getBackgroundColorByCorrectness, getColorByCorrectness } from '../../helpers';
 
 const useStyles = props => makeStyles(theme => ({
   root: {
     width: '90px',
     height: '25px',
-    border: `3px solid ${getInputColorByCorrectness(props.correctness, props.userInput, theme)}`,
+    border: `3px solid ${getColorByCorrectness(props.correctness, props.userInput, theme)}`,
     borderRadius:'16px',
     outline:'none',
     paddingLeft:'14px',
     fontFamily:'SF UI Display',
     fontWeight:'600',
     fontSize:'14px',
-    color:`${getInputColorByCorrectness(props.correctness, props.userInput, theme)}`,
+    color:`${getColorByCorrectness(props.correctness, props.userInput, theme)}`,
     backgroundColor:`${getBackgroundColorByCorrectness(props.correctness, theme)}`
   },
 }));
@@ -56,9 +56,6 @@ TestInputText.propTypes = {
   onChange: PropTypes.func,
   
   readOnly: PropTypes.bool,
-
-
-
 };
 
 TestInputText.defaultProps = {
