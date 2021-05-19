@@ -10,10 +10,9 @@ const useStyles = props => makeStyles(theme => ({
     width: "100%",
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-    backgroundColor: get(theme.palette, props.color),
   },
   title: {
-    paddingBottom: theme.spacing(2)
+    paddingBottom: theme.spacing(1)
   }
 }));
 
@@ -21,7 +20,7 @@ export function ContentBlock({ children, ...props }) {
   const classes = useStyles(props)();
   return (
     <Grid className={classes.root} direction='column' container>
-      <Grid item container className={classes.title}><Typography variant="body1"><strong>{props.title}</strong></Typography></Grid>
+      {props.title ? <Grid item container className={classes.title}><Typography variant="body1"><strong>{props.title}</strong></Typography></Grid> : null}
       <Grid item container><Typography variant="body1">{children}</Typography></Grid>
     </Grid>
   );

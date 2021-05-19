@@ -11,11 +11,11 @@ const useStyles = props => makeStyles( theme => ({
   }
 }));
 
-export function Surface({ children, ...props }){
+export function Surface({ children, style, ...props }){
   const classes = useStyles(props)();
   const classNames = `${classes.root} ${props.className}`;
   return (
-    <Box className={classNames}>
+    <Box style={style} className={classNames}>
       {children}
     </Box>
   );

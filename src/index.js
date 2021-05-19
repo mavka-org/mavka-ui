@@ -10,6 +10,7 @@ export * from './components/elements/buttons/IconButton';
 export * from './components/elements/buttons/NavigateButton';
 export * from './components/elements/TestInputText';
 export * from './components/elements/TestRadioButton';
+export * from './components/elements/Loading';
 
 export * from './components/layout/PageContainer';
 export * from './components/layout/Surface';
