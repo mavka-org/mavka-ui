@@ -44,6 +44,9 @@ const useStyles = props => makeStyles( theme => ({
   },
   fullWidth: {
     width: '100%'
+  },
+  verticalAlignMiddle: {
+    verticalAlign: 'middle'
   }
 }));
 export function TestTopNavBar({ children, ...props }){
@@ -62,9 +65,9 @@ export function TestTopNavBar({ children, ...props }){
 
           <Fade in={props.collapsed}>
             <Grid className={`${classes.headerGrid} ${classes.clickable}`} container alignItems='center' onClick={() => {props.setCollapsed(false)}}>
-              <Grid item><MenuIcon/></Grid>
+              <Grid item><MenuIcon className={classes.verticalAlignMiddle}/></Grid>
               <Grid className={classes.collapsedTitle} item><Typography variant='h6'>{props.collapsedTitle}</Typography></Grid>
-              <Grid item><StatusIcon className={classes.statusIcon} style={{fill: getColorByCorrectness(props.correctness, theme)}}/></Grid>
+              <Grid item><StatusIcon className={`${classes.statusIcon} ${classes.verticalAlignMiddle}`} style={{fill: getColorByCorrectness(props.correctness, theme)}}/></Grid>
             </Grid>
           </Fade>
 
