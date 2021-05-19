@@ -8,11 +8,11 @@ const useStyles = props => makeStyles( theme => ({
   }
 }));
 
-export function PageContainer({ children, ...props }){
+export function PageContainer({ children, style, ...props }){
   const classes = useStyles(props)();
   const classNames = `${classes.root} ${props.className}`;
   return (
-    <Container maxWidth="sm" className={classNames}>
+    <Container style={style} maxWidth="sm" className={classNames}>
       {children}
     </Container>
   );

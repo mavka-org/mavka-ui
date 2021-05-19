@@ -8,5 +8,7 @@ export default {
   component: ContentBlock
 };
 
-export const Default = () => <ContentBlock color="alternative.redLight">This is content info block's children</ContentBlock>;
+export const Default = () => <ContentBlock title="This is title">This is content block's children</ContentBlock>;
+
+export const NoTitle = () => <ContentBlock>This is content block's children. No title here</ContentBlock>;
 
