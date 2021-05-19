@@ -9,7 +9,7 @@ const useStyles = props => makeStyles(theme => ({
   root: {
     backgroundColor: get(theme.palette, props.color),
     borderRadius: theme.shape.borderRadius,
-    padding: `${theme.spacing(2)} ${theme.spacing(4)}`,
+    padding: theme.spacing(2),
     flexFlow:'nowrap'
   },
 }));

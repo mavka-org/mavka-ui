@@ -8,16 +8,20 @@ import get from 'get-value';
 const useStyles = props => makeStyles(theme => ({
   root: {
     width: "100%",
-    padding: theme.spacing(2),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     backgroundColor: get(theme.palette, props.color),
   },
+  title: {
+    paddingBottom: theme.spacing(2)
+  }
 }));
 
 export function ContentBlock({ children, ...props }) {
   const classes = useStyles(props)();
   return (
     <Grid className={classes.root} direction='column' container>
-      <Grid item container><Typography variant="body1"><strong>{props.title}</strong></Typography></Grid>
+      <Grid item container className={classes.title}><Typography variant="body1"><strong>{props.title}</strong></Typography></Grid>
       <Grid item container><Typography variant="body1">{children}</Typography></Grid>
     </Grid>
   );
