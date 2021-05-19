@@ -26,7 +26,10 @@ export function TestInputTextSection({ children, ...props }) {
                 <Grid item><Typography variant="body1">Відповідь: <b><span style={{ color:'#34C759' }}> {elem.correctAnswer}</span></b> </Typography> </Grid>
               </Grid>
 
-            : <Grid item>{elem.inputText}</Grid>
+            : <Grid item container direction="row" alignItems="center" spacing={1} style={{flexWrap: "nowrap"}}>
+                <Grid item><Typography><b><strong>{elem.label}:</strong></b></Typography></Grid>
+                <Grid item>{elem.inputText}</Grid>
+              </Grid>
 
         )
       }
