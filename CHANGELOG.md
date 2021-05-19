@@ -1,3 +1,20 @@
+# v0.1.21 (Wed May 19 2021)
+
+#### 🐛 Bug Fix
+
+- Bug fixes [#32](https://github.com/mavka-org/mavka-ui/pull/32) ([@ToniaZakorchemna](https://github.com/ToniaZakorchemna) [@arlaptiev](https://github.com/arlaptiev))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ 546882a192e423c20b3705ba2e6fe604c80f6b34 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 2
+
+- [@ToniaZakorchemna](https://github.com/ToniaZakorchemna)
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.20 (Wed May 19 2021)
 
 #### 🐛 Bug Fix
