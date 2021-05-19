@@ -13,7 +13,7 @@ export function TestInputTextSection({ children, ...props }) {
   const theme = useTheme();
 
   return (
-    <Grid container direction="row" spacing={2}>
+    <Grid container direction="row" spacing={2} style={{justifyContent: "center"}}>
       {props.testInputsList.map((elem) => {
         return (
           

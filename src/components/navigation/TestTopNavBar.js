@@ -70,20 +70,24 @@ export function TestTopNavBar({ children, ...props }){
 
       </div>
 
-      <Slide in={!props.collapsed} timeout={100} unmountOnExit mountOnEnter>
-        <div>
-          <Grow in={!props.collapsed} timeout={50}>
-            <div>
-              <Fade in={!props.collapsed} timeout={50}>
-                <div>
-                  <div className={classes.standardBottomPadding}>{children}</div>
-                  <div className={classes.fullWidth}><IconButton className={classes.collapseButton} onClick={() => {props.setCollapsed(true)}}><ExpandLessIcon/></IconButton></div>
-                </div>
-              </Fade>
-            </div>
-          </Grow>
-        </div>
-      </Slide>
+      {
+        children ?
+        <Slide in={!props.collapsed} timeout={100} unmountOnExit mountOnEnter>
+          <div>
+            <Grow in={!props.collapsed} timeout={50}>
+              <div>
+                <Fade in={!props.collapsed} timeout={50}>
+                  <div>
+                    <div className={classes.standardBottomPadding}>{children}</div>
+                    <div className={classes.fullWidth}><IconButton className={classes.collapseButton} onClick={() => {props.setCollapsed(true)}}><ExpandLessIcon/></IconButton></div>
+                  </div>
+                </Fade>
+              </div>
+            </Grow>
+          </div>
+        </Slide>
+        : null
+      }
 
     </PageContainer>
   );
