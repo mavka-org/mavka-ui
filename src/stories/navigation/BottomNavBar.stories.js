@@ -19,9 +19,9 @@ export const WithControls = () => <BottomNavBar
     <ControlsButtonGroup
       collapsedButton={<Button onClick={() => {alert('Collapsed clicked')}} color='secondary' fullWidth>Завершити тест</Button>}
       expendedButtons={[
-      <NavigateButton onClick={() => {alert('Going back!')}} before/>,
-      <Button onClick={() => {alert('Clicked')}} fullWidth>Перевірити</Button>,
-      <NavigateButton onClick={() => {alert('Going forward!')}}/>
+      <NavigateButton size='large' onClick={() => {alert('Going back!')}} before/>,
+      <Button size='large' onClick={() => {alert('Clicked')}} fullWidth>Перевірити</Button>,
+      <NavigateButton size='large' onClick={() => {alert('Going forward!')}}/>
       ]}
     />
   }
