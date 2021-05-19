@@ -32,4 +32,30 @@ export const Default = () => {
 };
 
 
-export const NoButton = () => <CustomDialog open={false} title="This is Dialog title" >This is a dialog children</CustomDialog>;
+export const WithActions = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <>
+      <Typography>This is a Dialog with children, controlled by a Button, with actions</Typography>
+      <Button onClick={() => setOpen(prev => !prev)}>Dialog</Button>
+      <CustomDialog 
+        handleClickOpen={handleClickOpen} 
+        handleClose={handleClose} 
+        open={open} 
+        title="This is Dialog title"
+        actions={[<Button onClick={handleClose} color="primary" variant="text">Disagree</Button>, <Button onClick={handleClose} color="primary" autofocus>Agree</Button>]}
+      >
+        This is a Dialog chilldren
+      </CustomDialog>
+    </>
+  )
+};
