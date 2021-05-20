@@ -57,16 +57,16 @@ const theme = {
       fontWeight: 600,
 
     },
-    body1:{
+    body1: {
 
     },
-    body2:{
+    body2: {
 
     },
-    subtitle1:{
+    subtitle1: {
 
     },
-    subtitle2:{
+    subtitle2: {
 
     },
   },
@@ -142,9 +142,9 @@ const theme = {
   },
   overrides: {
     MuiLink: {
-      root: {
-        textDecoration: 'none',
-      },
+      root:{
+        "text-decoration":'none !important'
+      }
     },
   },
 }
