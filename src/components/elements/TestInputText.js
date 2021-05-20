@@ -35,8 +35,8 @@ export function TestInputText({ children, ...props }) {
       classes={{ focused: classes.inputFocused }}
       value={value}
       onChange={handleChange}
-      placeholder={props.placeholder}
-      readOnly={props.readOnly}
+      placeholder={value ? false : props.placeholder}
+      disabled={props.readOnly}
       inputProps={{
         'aria-label': 'description'
       }}
