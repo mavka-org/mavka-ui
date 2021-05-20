@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { getBackgroundColorByCorrectness, getInputColorByCorrectness } from '../../helpers';
+import { getBackgroundColorByCorrectness, getColorByCorrectness } from '../../helpers';
 import { InputBase, TextField } from '@material-ui/core';
 
 const useStyles = (props, value) => makeStyles(theme => ({
   root: {
     maxWidth: '180px',
-    border: `3px solid ${getInputColorByCorrectness(props.correctness, value, theme)}`,
+    border: `3px solid ${getColorByCorrectness(props.correctness, theme, value)}`,
     borderRadius: '100px',
-    outline:'none',
+    outline: 'none',
     padding: `${theme.spacing(0.5)}px ${theme.spacing(1.5)}px`,
-    color:`${getInputColorByCorrectness(props.correctness, value, theme)}`,
+    color: `${getColorByCorrectness(props.correctness, theme, value)}`,
     backgroundColor: `${getBackgroundColorByCorrectness(props.correctness, theme)}`,
   },
   inputFocused: {
-    border: `3px solid ${getInputColorByCorrectness(props.correctness, 'some value', theme)}`
+    border: `3px solid ${getColorByCorrectness(props.correctness, theme, 'some value')}`
   }
 }));
 
@@ -30,22 +30,22 @@ export function TestInputText({ children, ...props }) {
   }
 
   return (
-    <InputBase 
+    <InputBase
       className={classes.root}
-      classes={{focused: classes.inputFocused}}
+      classes={{ focused: classes.inputFocused }}
       value={value}
       onChange={handleChange}
-      placeholder={props.placeholder}
-      readOnly={props.readOnly} 
-      inputProps={{ 
+      placeholder={value ? false : props.placeholder}
+      disabled={props.readOnly}
+      inputProps={{
         'aria-label': 'description'
-      }} 
+      }}
     />
-    // <input 
-    // className={classes.root} 
-    // placeholder={props.userInput || null} 
-    // value={props.userInput ? props.userInput : "Відповідь"} 
-    // readOnly={props.readOnly} 
+    // <input
+    // className={classes.root}
+    // placeholder={props.userInput || null}
+    // value={props.userInput ? props.userInput : "Відповідь"}
+    // readOnly={props.readOnly}
     // onChange={(event) => props.onChange(event)} />
   );
 }
@@ -71,11 +71,8 @@ TestInputText.propTypes = {
    * On input change function
    */
   onChange: PropTypes.func,
-  
+
   readOnly: PropTypes.bool,
-
-
-
 };
 
 TestInputText.defaultProps = {

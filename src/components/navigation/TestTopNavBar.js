@@ -67,7 +67,7 @@ export function TestTopNavBar({ children, ...props }){
             <Grid className={`${classes.headerGrid} ${classes.clickable}`} container alignItems='center' onClick={() => {props.setCollapsed(false)}}>
               <Grid item><MenuIcon className={classes.verticalAlignMiddle}/></Grid>
               <Grid className={classes.collapsedTitle} item><Typography variant='h6'>{props.collapsedTitle}</Typography></Grid>
-              <Grid item><StatusIcon className={`${classes.statusIcon} ${classes.verticalAlignMiddle}`} style={{fill: getColorByCorrectness(props.correctness, theme)}}/></Grid>
+              <Grid item><StatusIcon className={`${classes.statusIcon} ${classes.verticalAlignMiddle}`} style={{fill: getColorByCorrectness(props.currentQuestionCorrectness, theme, props.currentQuestionStarted)}}/></Grid>
             </Grid>
           </Fade>
 
@@ -108,19 +108,23 @@ TestTopNavBar.propTypes = {
     /**
    * Correctness of the current question. Determines the color of the question status indicator
    */
-     correctness: PropTypes.func,
-  /**
-   * Handler for the exit button click
-   */
-   exitOnClick: PropTypes.func,
-  /**
-   * Title that shows up in the collapsed version of the TestTopNavBar
-   */
-  collapsedTitle: PropTypes.string,
-  /**
-   * Optional content that goes into the subheader of the TestTopNavBar
-   */
-  children: PropTypes.node,
+    currentQuestionCorrectness: PropTypes.string,
+    /**
+     * If the current question is submitted. Determines the color of the question status indicator
+     */
+    currentQuestionStarted: PropTypes.bool,
+    /**
+     * Handler for the exit button click
+     */
+    exitOnClick: PropTypes.func,
+    /**
+     * Title that shows up in the collapsed version of the TestTopNavBar
+     */
+    collapsedTitle: PropTypes.string,
+    /**
+     * Optional content that goes into the subheader of the TestTopNavBar
+     */
+    children: PropTypes.node,
 };
 
 TestTopNavBar.defaultTypes = {

@@ -34,7 +34,7 @@ export function TestInputTextSection({ children, ...props }) {
                 <Grid item><Typography>Відповідь: <b><span style={{ color:theme.palette.alternative.green }}> {elem.correctAnswer}</span></b> </Typography> </Grid>
               </Grid>
 
-            : <Grid item container direction="row" alignItems="center" spacing={1} style={{flexWrap: "nowrap"}}>
+            : <Grid item container direction="row" alignItems="center" spacing={1} style={{flexWrap: "nowrap", justifyContent: "center"}}>
                 <Grid item><Typography><b><strong>{elem.label}:</strong></b></Typography></Grid>
                 <Grid item>{elem.inputText}</Grid>
               </Grid>

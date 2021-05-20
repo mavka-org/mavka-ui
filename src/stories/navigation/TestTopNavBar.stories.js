@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import Grid from '@material-ui/core/Grid';
 import { useTheme } from '@material-ui/core/styles';
 import { TestTopNavBar } from '../../components/navigation/TestTopNavBar';
 import TestRadioInputSection from '../../components/userInput/TestRadioInputSection';
@@ -50,3 +50,65 @@ export const Default = () => {
     </TestTopNavBar>
   )
 }
+
+  export const StatusIcon = () => { 
+    const [collapsed, setCollapsed] = useState(false);
+    const theme = useTheme();
+  
+    useEffect(() => {
+      if (collapsed) {
+        return;
+      }
+    
+      const handleScroll = () => {
+        setCollapsed(true);
+      }
+    
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, [collapsed]);
+  
+    return(
+      <Grid container direction="column">
+        <Grid item>
+          <TestTopNavBar 
+            collapsedTitle='Завдання 1'
+            collapsed={true}
+            currentQuestionCorrectness="correct"
+          >
+          </TestTopNavBar>
+        </Grid>
+
+        <Grid item>
+          <TestTopNavBar 
+            collapsedTitle='Завдання 1'
+            collapsed={true}
+            currentQuestionCorrectness="part-correct"
+          >
+          </TestTopNavBar>
+        </Grid>
+
+        <Grid item>
+          <TestTopNavBar 
+            collapsedTitle='Завдання 1'
+            collapsed={true}
+            currentQuestionCorrectness="incorrect"
+          >
+          </TestTopNavBar>
+        </Grid>
+
+        <Grid item>
+          <TestTopNavBar 
+            collapsedTitle='Завдання 1'
+            collapsed={true}
+            currentQuestionStarted
+          >
+          </TestTopNavBar>
+        </Grid>
+
+        
+      </Grid>
+    
+    )
+}
+
