@@ -1,3 +1,19 @@
+# v0.1.23 (Thu May 20 2021)
+
+#### 🐛 Bug Fix
+
+- bug fix: forgotten export [#34](https://github.com/mavka-org/mavka-ui/pull/34) ([@arlaptiev](https://github.com/arlaptiev))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ f97395a4fb61fb14f5a56a3edfe67abdc7dc2e71 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 1
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.22 (Thu May 20 2021)
 
 #### 🐛 Bug Fix
