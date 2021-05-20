@@ -9,13 +9,13 @@ const useStyles = (props, value) => makeStyles(theme => ({
     maxWidth: '180px',
     border: `3px solid ${getColorByCorrectness(props.correctness, theme, value)}`,
     borderRadius: '100px',
-    outline:'none',
+    outline: 'none',
     padding: `${theme.spacing(0.5)}px ${theme.spacing(1.5)}px`,
-    color:`${getColorByCorrectness(props.correctness, theme, value)}`,
+    color: `${getColorByCorrectness(props.correctness, theme, value)}`,
     backgroundColor: `${getBackgroundColorByCorrectness(props.correctness, theme)}`,
   },
   inputFocused: {
-    border: `3px solid ${getInputColorByCorrectness(props.correctness, 'some value', theme)}`
+    border: `3px solid ${getColorByCorrectness(props.correctness, theme, 'some value')}`
   }
 }));
 
@@ -32,7 +32,7 @@ export function TestInputText({ children, ...props }) {
   return (
     <InputBase
       className={classes.root}
-      classes={{focused: classes.inputFocused}}
+      classes={{ focused: classes.inputFocused }}
       value={value}
       onChange={handleChange}
       placeholder={props.placeholder}
