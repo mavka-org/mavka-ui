@@ -53,7 +53,7 @@ const emojisMap = [
     '🐉'
 ];
 
-const LoadingScreen = (props) => {
+export const LoadingScreen = (props) => {
 
   const [time, setTimer] = React.useState(null);
   const classes = useStyles(props)();
