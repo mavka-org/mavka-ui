@@ -10,17 +10,14 @@ const useStyles = props => makeStyles(theme => ({
     width: "100%",
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-  },
-  title: {
-    paddingBottom: theme.spacing(1)
   }
 }));
 
 export function ContentBlock({ children, ...props }) {
   const classes = useStyles(props)();
   return (
-    <Grid className={classes.root} direction='column' container>
-      {props.title ? <Grid item container className={classes.title}><Typography><strong>{props.title}</strong></Typography></Grid> : null}
+    <Grid className={classes.root} direction='column' container spacing={1}>
+      {props.title ? <Grid item container><Typography><strong>{props.title}</strong></Typography></Grid> : null}
       <Grid item container>{children}</Grid>
     </Grid>
   );
