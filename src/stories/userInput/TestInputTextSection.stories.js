@@ -9,13 +9,20 @@ export default {
 };
 
 
-export const Default = () => <TestInputTextSection testInputsList={[{"label":"1", "inputText": <TestInputText />, "correctAnswer": "12.67"},
-                                                                    {"label":"2", "inputText": <TestInputText />, "correctAnswer": "40.67"}]}
-                              />;
+export const Default = () => <TestInputTextSection 
+  testInputsList={[
+  {"label":"1", "inputText": <TestInputText />, "correctAnswer": "12.67"}, 
+  {"label":"2", "inputText": <TestInputText />, "correctAnswer": "40.67"}
+  ]}
+/>;
 
 export const OneInput = () =>
   <TestInputTextSection testInputsList={[{"label":"1", "inputText": <TestInputText />, "correctAnswer": "12.67"}]} />;
 
-  export const Submitted = () => <TestInputTextSection submitted testInputsList={[{"label":"1", "inputText": <TestInputText />, "correctAnswer": "12.67"},
-  {"label":"2", "inputText": <TestInputText />, "correctAnswer": "40.67"}]}
+export const Submitted = () => <TestInputTextSection 
+  submitted 
+  testInputsList={[
+    {"label":"1", "inputText": <TestInputText />, "correctAnswer": "12.67"}, 
+    {"label":"2", "inputText": <TestInputText />, "correctAnswer": "40.67"}
+  ]}
 />;

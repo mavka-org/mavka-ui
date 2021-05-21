@@ -24,20 +24,22 @@ export function TestInputTextSection({ children, ...props }) {
     <Grid container direction="row" spacing={2} style={{justifyContent: "center"}}>
       {props.testInputsList.map((elem) => {
         return (
-          
-            props.submitted 
-            ? <Grid item container direction="column" spacing={1} className={classes.singleSection}>
-                <Grid item container direction="row" alignItems="center" spacing={1} style={{flexWrap: "nowrap"}}>
+           
+          <Grid item container direction="column" spacing={1} className={classes.singleSection}>
+            <Grid item container direction="row" alignItems="center" spacing={1} style={{flexWrap: "nowrap"}}>
+              {
+                props.testInputsList.length !== 1 ?
                   <Grid item><Typography><b><strong>{elem.label}:</strong></b></Typography></Grid>
-                  <Grid item>{elem.inputText}</Grid>
-                </Grid>
-                <Grid item><Typography>Відповідь: <b><span style={{ color:theme.palette.alternative.green }}> {elem.correctAnswer}</span></b> </Typography> </Grid>
-              </Grid>
-
-            : <Grid item container direction="row" alignItems="center" spacing={1} style={{flexWrap: "nowrap", justifyContent: "center"}}>
-                <Grid item><Typography><b><strong>{elem.label}:</strong></b></Typography></Grid>
-                <Grid item>{elem.inputText}</Grid>
-              </Grid>
+                : null
+              }
+              <Grid item>{elem.inputText}</Grid>
+            </Grid>
+            {
+              props.submitted ?
+              <Grid item><Typography>Відповідь: <b><span style={{ color:theme.palette.alternative.green }}> {elem.correctAnswer}</span></b> </Typography> </Grid>
+              : null
+            }
+          </Grid>
 
         )
       }
