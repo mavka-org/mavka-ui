@@ -1,3 +1,15 @@
+# v0.1.25 (Fri May 21 2021)
+
+#### 🐛 Bug Fix
+
+- minor fixes [#37](https://github.com/mavka-org/mavka-ui/pull/37) ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 1
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.24 (Fri May 21 2021)
 
 #### 🐛 Bug Fix
