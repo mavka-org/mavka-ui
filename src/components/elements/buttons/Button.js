@@ -35,7 +35,7 @@ export function ButtonBase({ children, ...props }){
   const classes = useStyles(props)();
   const classNames = `${classes.base} ${props.className}`;
   return (
-    <MuiButton {...props} className={classNames} disableElevation centerRipple disableFocusRipple>{children}</MuiButton>
+    <MuiButton {...props} className={classNames} disableelevation centerRipple disableFocusRipple>{children}</MuiButton>
 );
 }
 
