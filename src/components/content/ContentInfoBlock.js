@@ -10,6 +10,7 @@ const useStyles = props => makeStyles(theme => ({
     width:"100%",
     padding: theme.spacing(2),
     backgroundColor: get(theme.palette, props.color),
+    borderRadius: theme.shape.borderRadius
   },
  
 }));
