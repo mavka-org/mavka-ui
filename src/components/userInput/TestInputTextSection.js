@@ -7,12 +7,12 @@ import { Typography } from '@material-ui/core';
 const useStyles = props => makeStyles(theme => ({
   singleSection: {
     maxWidth: '150px',
-    [theme.breakpoints.up('xs')]: {
-      maxWidth: '200px',
-    },
-    [theme.breakpoints.up('sm')]: {
-      maxWidth: '250px',
-    },
+    // [theme.breakpoints.up('xs')]: {
+    //   maxWidth: '200px',
+    // },
+    // [theme.breakpoints.up('sm')]: {
+    //   maxWidth: '250px',
+    // },
   }
 }));
 
