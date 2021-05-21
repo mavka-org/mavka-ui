@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from '../../components/elements/Link';
-import { Router, Route } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
 
 export default {
   title: 'Elements/Link',
@@ -9,4 +9,4 @@ export default {
 };
 
 
-export const Default = () => <Link>This is a Default Link used to pad all the pages.</Link>
+export const Default = () => <Typography><Link href='https://google.com' target='_blank'>This is a Default Link for style and external links/new tab.</Link></Typography>
