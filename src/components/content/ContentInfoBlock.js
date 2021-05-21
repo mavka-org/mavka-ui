@@ -19,7 +19,7 @@ export function ContentInfoBlock({ children, ...props }) {
   const classes = useStyles(props)();
   return (
     <Grid container className={classes.root}>
-      <Typography variant="body1">{children}</Typography>
+      {children}
     </Grid>
   );
 }

@@ -20,8 +20,8 @@ export function ContentBlock({ children, ...props }) {
   const classes = useStyles(props)();
   return (
     <Grid className={classes.root} direction='column' container>
-      {props.title ? <Grid item container className={classes.title}><Typography variant="body1"><strong>{props.title}</strong></Typography></Grid> : null}
-      <Grid item container><Typography variant="body1">{children}</Typography></Grid>
+      {props.title ? <Grid item container className={classes.title}><Typography><strong>{props.title}</strong></Typography></Grid> : null}
+      <Grid item container>{children}</Grid>
     </Grid>
   );
 }
