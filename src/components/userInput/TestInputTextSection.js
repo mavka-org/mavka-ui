@@ -26,7 +26,7 @@ export function TestInputTextSection({ children, ...props }) {
         return (
            
           <Grid item container direction="column" spacing={1} className={classes.singleSection}>
-            <Grid item container direction="row" alignItems="center" spacing={1} style={{flexWrap: "nowrap"}}>
+            <Grid item container direction="row" justifyContent="center" spacing={1} style={{flexWrap: "nowrap"}}>
               {
                 props.testInputsList.length !== 1 ?
                   <Grid item><Typography><b><strong>{elem.label}:</strong></b></Typography></Grid>
