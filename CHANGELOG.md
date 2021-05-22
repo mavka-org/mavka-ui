@@ -1,3 +1,19 @@
+# v0.1.29 (Sat May 22 2021)
+
+#### 🐛 Bug Fix
+
+- fixed TestRadioButton label positioning [#41](https://github.com/mavka-org/mavka-ui/pull/41) ([@arlaptiev](https://github.com/arlaptiev))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ b5cf68998593721f27c81d87f9deb3aa8fcdd060 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 1
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.28 (Sat May 22 2021)
 
 #### 🐛 Bug Fix
