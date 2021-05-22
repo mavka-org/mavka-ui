@@ -1,3 +1,19 @@
+# v0.1.28 (Sat May 22 2021)
+
+#### 🐛 Bug Fix
+
+- revert button typography fix [#40](https://github.com/mavka-org/mavka-ui/pull/40) ([@arlaptiev](https://github.com/arlaptiev))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ ae99ce9e2249c71287526406628ee9aeaea18a2a 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 1
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.27 (Sat May 22 2021)
 
 #### 🐛 Bug Fix
