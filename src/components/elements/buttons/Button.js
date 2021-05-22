@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import get from 'get-value';
 import MuiButton from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
 
 const useStyles = props => makeStyles( theme => ({
   base: {
@@ -44,7 +45,7 @@ export function Button({ children, ...props }){
   const classNames = `${classes[props.variant]} ${props.info ? classes.info : ''} ${props.className}`;
   if (props.info) props.onClick = () => {} // override onClick
   return (
-      <ButtonBase {...props} className={classNames}>{children}</ButtonBase>
+      <ButtonBase {...props} className={classNames}><Typography>{children}</Typography></ButtonBase>
   );
 }
 
