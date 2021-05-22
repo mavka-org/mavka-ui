@@ -45,7 +45,7 @@ export function Button({ children, ...props }){
   const classNames = `${classes[props.variant]} ${props.info ? classes.info : ''} ${props.className}`;
   if (props.info) props.onClick = () => {} // override onClick
   return (
-      <ButtonBase {...props} className={classNames}><Typography>{children}</Typography></ButtonBase>
+      <ButtonBase {...props} className={classNames}>{children}</ButtonBase>
   );
 }
 
