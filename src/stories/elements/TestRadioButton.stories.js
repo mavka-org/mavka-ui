@@ -8,7 +8,7 @@ export default {
   component: TestRadioButton,
 };
 
-export const Default = () => <TestRadioButton label="A"/>;
+export const Default = () => <TestRadioButton label="27"/>;
 
 export const Selected = () =>
   <Grid container spacing={1}>
