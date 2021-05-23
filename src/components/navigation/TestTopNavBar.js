@@ -8,7 +8,7 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLessRounded';
 import StatusIcon from '@material-ui/icons/FiberManualRecord';
 import PageContainer from '../layout/PageContainer';
 import IconButton from '../elements/buttons/IconButton';
-import { getColorByCorrectness } from '../../helpers';
+import { getTextLabelByCorrectness } from '../../helpers';
 
 const useStyles = props => makeStyles( theme => ({
   header: {
@@ -67,7 +67,7 @@ export function TestTopNavBar({ children, ...props }){
             <Grid className={`${classes.headerGrid} ${classes.clickable}`} container alignItems='center' onClick={() => {props.setCollapsed(false)}}>
               <Grid item><MenuIcon className={classes.verticalAlignMiddle}/></Grid>
               <Grid className={classes.collapsedTitle} item><Typography variant='h6'>{props.collapsedTitle}</Typography></Grid>
-              <Grid item><StatusIcon className={`${classes.statusIcon} ${classes.verticalAlignMiddle}`} style={{fill: getColorByCorrectness(props.currentQuestionCorrectness, theme, props.currentQuestionStarted)}}/></Grid>
+              <Grid item><Typography variant='caption'>{getTextLabelByCorrectness(props.currentQuestionCorrectness, props.currentQuestionStarted)}</Typography></Grid>
             </Grid>
           </Fade>
 

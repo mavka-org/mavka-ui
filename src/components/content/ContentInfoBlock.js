@@ -10,6 +10,7 @@ const useStyles = props => makeStyles(theme => ({
     width:"100%",
     padding: theme.spacing(2),
     backgroundColor: get(theme.palette, props.color),
+    borderRadius: theme.shape.borderRadius
   },
  
 }));
@@ -18,7 +19,7 @@ export function ContentInfoBlock({ children, ...props }) {
   const classes = useStyles(props)();
   return (
     <Grid container className={classes.root}>
-      <Typography variant="body1">{children}</Typography>
+      {children}
     </Grid>
   );
 }

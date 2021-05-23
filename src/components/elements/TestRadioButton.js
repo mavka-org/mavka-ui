@@ -38,9 +38,7 @@ export function TestRadioButton({ children, ...props }){
   return (
       <div>
           <ButtonBase className={classes.button} {...props}>
-          <Typography component="div" style={{position:'relative', left:'0.5px', top:'-0.5px'}}>
-            <Box fontWeight="fontWeightBold" >{props.label}</Box>
-           </Typography>
+            <strong>{props.label}</strong>
           <div className={classes.overfill}></div>
           </ButtonBase>
       </div>
