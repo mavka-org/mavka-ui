@@ -26,6 +26,16 @@ export function getColorByCorrectness(correctness, theme, userInput) {
 
 }
 
+export function getTextLabelByCorrectness(correctness, userInput) {
+
+  if (correctness === "correct") { return 'Правильно' }
+  else if (correctness === "incorrect") { return 'Неправильно' }
+  else if (correctness === "part-correct") { return 'Частково правильно' }
+  else if (userInput) { return 'Збережено' }
+  return ''
+
+}
+
 export function getBackgroundColorByCorrectness(correctness, theme) {
   if (correctness === "correct") { return theme.palette.alternative.greenLight }
   else if (correctness === "incorrect") { return theme.palette.alternative.redLight }
