@@ -1,3 +1,20 @@
+# v0.1.32 (Sun May 23 2021)
+
+#### 🐛 Bug Fix
+
+- export Footer [#44](https://github.com/mavka-org/mavka-ui/pull/44) ([@arlaptiev](https://github.com/arlaptiev))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ 52f646f95f5075f8723d88a48ec1f1a153a91baf 🚀 ([@ToniaZakorchemna](https://github.com/ToniaZakorchemna))
+
+#### Authors: 2
+
+- [@ToniaZakorchemna](https://github.com/ToniaZakorchemna)
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+
+---
+
 # v0.1.31 (Sun May 23 2021)
 
 #### 🐛 Bug Fix
