@@ -1,3 +1,20 @@
+# v0.1.30 (Sun May 23 2021)
+
+#### 🐛 Bug Fix
+
+- top nav bar caption [#42](https://github.com/mavka-org/mavka-ui/pull/42) ([@SevkavTV](https://github.com/SevkavTV))
+
+#### ⚠️ Pushed to `prod`
+
+- Deploying to prod from @ a8f109c773b7f41bee51b95356970d9f6ee93eef 🚀 ([@arlaptiev](https://github.com/arlaptiev))
+
+#### Authors: 2
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+- Seva Archakov ([@SevkavTV](https://github.com/SevkavTV))
+
+---
+
 # v0.1.29 (Sat May 22 2021)
 
 #### 🐛 Bug Fix
