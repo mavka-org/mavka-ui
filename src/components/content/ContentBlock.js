@@ -15,6 +15,7 @@ const useStyles = props => makeStyles(theme => ({
 
 export function ContentBlock({ children, ...props }) {
   const classes = useStyles(props)();
+  
   return (
     <Grid className={classes.root} direction='column' container spacing={1}>
       {props.title ? <Grid item container><Typography><strong>{props.title}</strong></Typography></Grid> : null}

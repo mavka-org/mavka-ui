@@ -142,8 +142,8 @@ const theme = {
   },
   overrides: {
     MuiLink: {
-      root:{
-        "text-decoration":'underline !important'
+      underlineHover: {
+        "text-decoration":'underline'
       }
     },
   },

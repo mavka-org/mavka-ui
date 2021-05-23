@@ -4,7 +4,6 @@ import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Surface from '../layout/Surface';
 import PageContainer from '../layout/PageContainer';
-// just needed to push something
 
 const useStyles = props => makeStyles( theme => ({
   root: {
