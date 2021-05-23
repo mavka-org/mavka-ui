@@ -16,7 +16,7 @@ export function IconButtonBase({ children, ...props }){
   const classes = useStyles(props)();
   const classNames = `${classes.base} ${props.className}`;
   return (
-    <MuiIconButton {...props} className={classNames} disableElevation centerRipple disableFocusRipple>{children}</MuiIconButton>
+    <MuiIconButton {...props} className={classNames} disableelevation centerRipple disableFocusRipple>{children}</MuiIconButton>
   );
 }
 

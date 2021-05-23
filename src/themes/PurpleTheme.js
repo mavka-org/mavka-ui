@@ -141,11 +141,11 @@ const theme = {
     borderRadius: 16
   },
   overrides: {
-    MuiLink: {
-      root:{
-        "text-decoration":'underline !important'
-      }
-    },
+    // MuiLink: {
+    //   underlineHover: {
+    //     "text-decoration":'underline'
+    //   }
+    // },
   },
 }
 
