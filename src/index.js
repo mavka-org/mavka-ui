@@ -18,6 +18,7 @@ export * from './components/layout/Surface';
 export * from './components/navigation/BottomNavBar';
 export * from './components/navigation/ControlsButtonGroup';
 export * from './components/navigation/TestTopNavBar';
+export * from './components/navigation/Footer';
 
 export * from './components/userInput/TestInputTextSection';
 export * from './components/userInput/TestRadioInputSection';
