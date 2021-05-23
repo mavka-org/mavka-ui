@@ -78,7 +78,7 @@ export const LoadingScreen = (props) => {
    }
 
    return (
-    <Typography>
+    <Typography component={'span'} >
       <div className={classes.root}>
         <div className={classes.loading}>
             <div className={classes.logo}><strong>мавка </strong>зно</div>
