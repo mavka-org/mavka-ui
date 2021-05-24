@@ -18,7 +18,7 @@ export function ModeCard({ children, ...props }) {
   const classes = useStyles(props)();
   return (
     <Grid container direction='row' alignItems="flex-start" spacing={1} className={classes.root}>
-      <Grid item style={{ marginRight: '20px' }}>
+      <Grid item style={{ marginRight: '20px', width:'50px' }}>
         <p style={{ fontSize: '48px', margin: '0' }}>{props.iconText}</p>
       </Grid>
       <Grid item >
