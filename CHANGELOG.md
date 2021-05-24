@@ -1,3 +1,17 @@
+# v0.1.33 (Mon May 24 2021)
+
+#### 🐛 Bug Fix
+
+- minor [#46](https://github.com/mavka-org/mavka-ui/pull/46) ([@Mortyy1](https://github.com/Mortyy1) [@arlaptiev](https://github.com/arlaptiev))
+- fixed modecard [#45](https://github.com/mavka-org/mavka-ui/pull/45) ([@Mortyy1](https://github.com/Mortyy1))
+
+#### Authors: 2
+
+- Artem Laptiev ([@arlaptiev](https://github.com/arlaptiev))
+- Mortyy1 ([@Mortyy1](https://github.com/Mortyy1))
+
+---
+
 # v0.1.32 (Sun May 23 2021)
 
 #### 🐛 Bug Fix
